@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --brand: #10b981;
+  --brand-dark: #059669;
+  --brand-light: #34d399;
+  --brand-bg: rgba(16, 185, 129, 0.12);
+  --bg: #070c14;
+  --bg-secondary: #0b1324;
+  --card: rgba(13, 20, 36, 0.45);
+  --card-solid: rgba(13, 20, 36, 0.6);
+  --card-hover: rgba(20, 32, 56, 0.6);
+  --text: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-faint: #64748b;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-light: rgba(255, 255, 255, 0.05);
+  --risk-high: #ef4444;
+  --risk-medium: #f59e0b;
+  --risk-low: #10b981;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.6);
+  --radius: 14px;
+  --radius-sm: 10px;
+  --sidebar-width: 260px;
+  --topbar-height: 64px;
+  --font: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg);
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+input {
+  font-family: inherit;
+}
+
+/* Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070c14;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}

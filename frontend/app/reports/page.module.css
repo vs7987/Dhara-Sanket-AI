@@ -1,0 +1,56 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin: 0;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.chartsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 20px;
+}
+
+.chartCard {
+  min-width: 0;
+}
+
+.lineRow {
+  /* full width */
+}
+
+@media (max-width: 1200px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .chartsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+}
