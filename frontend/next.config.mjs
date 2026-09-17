@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
+  output: 'export',
+  basePath: '/Dhara-Sanket-AI',
+  assetPrefix: '/Dhara-Sanket-AI/',
 };
 
 export default nextConfig;
