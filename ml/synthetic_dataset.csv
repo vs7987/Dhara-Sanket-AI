@@ -1,0 +1,751 @@
+parcel_id,district,land_type,area_ha,num_title_holders,circle_rate_lakh,market_rate_lakh,rate_deviation_pct,active_court_stays,deed_mismatch,gram_sabha_pending,is_forest,rr_required,infra_proximity_km,delay_months,risk_score,risk_level
+PCL-MP-1000,Jabalpur,Agricultural,63.16,4,43.97,88.73,101.8,0,0,0,0,1,19.3,15.0,47,Medium
+PCL-MP-1001,Sehore,Private Commercial,47.93,4,43.74,78.93,80.5,0,1,0,0,0,31.6,16.0,50,Medium
+PCL-MP-1002,Dewas,Agricultural,18.69,6,33.69,50.57,50.1,1,0,0,0,1,20.9,22.4,70,High
+PCL-MP-1003,Bhopal,Private Commercial,70.58,3,74.07,146.04,97.2,2,0,0,0,1,10.9,29.1,91,High
+PCL-MP-1004,Bhopal,Agricultural,38.81,6,38.83,56.89,46.5,0,0,0,0,1,3.7,12.2,38,Medium
+PCL-MP-1005,Indore,Agricultural,32.56,4,83.19,180.7,117.2,0,0,0,0,1,14.5,13.1,41,Medium
+PCL-MP-1006,Dewas,Agricultural,77.66,6,43.07,72.09,67.4,0,0,0,0,1,6.7,13.1,41,Medium
+PCL-MP-1007,Jabalpur,Private Commercial,76.37,4,55.77,133.63,139.6,1,0,0,0,0,7.3,16.6,52,Medium
+PCL-MP-1008,Indore,Forest/Eco-sensitive,36.17,1,57.71,104.69,81.4,0,0,1,1,0,30.8,19.2,60,Medium
+PCL-MP-1009,Ujjain,Agricultural,54.66,2,49.95,58.91,17.9,1,0,0,0,0,34.4,9.9,31,Low
+PCL-MP-1010,Sehore,Tribal Schedule V,74.06,7,96.54,162.78,68.6,1,1,0,0,0,41.4,21.8,68,High
+PCL-MP-1011,Bhopal,Government Wasteland,74.75,3,45.35,58.92,29.9,0,0,0,0,0,36.8,3.5,11,Low
+PCL-MP-1012,Ujjain,Private Commercial,11.13,4,105.48,125.46,18.9,0,0,0,0,0,43.4,5.4,17,Low
+PCL-MP-1013,Jabalpur,Agricultural,26.84,6,62.24,105.84,70.1,2,0,0,0,1,10.7,26.6,83,High
+PCL-MP-1014,Indore,Agricultural,60.31,1,44.46,100.61,126.3,0,1,0,0,1,30.3,15.7,49,Medium
+PCL-MP-1015,Sehore,Private Commercial,21.03,4,93.64,114.81,22.6,1,0,0,0,1,32.9,16.6,52,Medium
+PCL-MP-1016,Jabalpur,Forest/Eco-sensitive,55.1,1,59.22,85.39,44.2,0,0,1,1,1,19.3,17.0,53,Medium
+PCL-MP-1017,Bhopal,Agricultural,73.28,2,29.3,70.29,139.9,0,0,0,0,0,38.3,9.6,30,Low
+PCL-MP-1018,Indore,Agricultural,41.17,7,101.71,120.91,18.9,1,0,0,0,0,13.2,13.1,41,Medium
+PCL-MP-1019,Ujjain,Private Commercial,61.21,2,41.14,52.07,26.6,1,1,0,0,1,2.7,16.3,51,Medium
+PCL-MP-1020,Raisen,Private Commercial,72.55,2,29.83,50.3,68.6,0,1,0,0,1,38.9,11.2,35,Low
+PCL-MP-1021,Sehore,Agricultural,50.74,2,60.63,108.91,79.6,0,0,0,0,1,32.4,10.6,33,Low
+PCL-MP-1022,Indore,Agricultural,11.56,5,63.86,146.69,129.7,0,1,0,0,0,28.1,16.3,51,Medium
+PCL-MP-1023,Sehore,Agricultural,22.91,6,99.87,222.2,122.5,2,0,0,0,0,27.7,27.2,85,High
+PCL-MP-1024,Ujjain,Forest/Eco-sensitive,1.16,3,104.2,114.64,10.0,0,0,0,1,0,33.5,6.7,21,Low
+PCL-MP-1025,Indore,Forest/Eco-sensitive,17.7,3,67.96,89.31,31.4,0,1,1,1,0,2.5,19.8,62,Medium
+PCL-MP-1026,Dewas,Forest/Eco-sensitive,54.34,3,38.73,61.61,59.1,0,0,1,1,0,31.3,16.6,52,Medium
+PCL-MP-1027,Dewas,Private Commercial,13.01,2,28.56,42.23,47.9,0,0,0,0,0,2.3,5.8,18,Low
+PCL-MP-1028,Dewas,Agricultural,21.59,2,55.06,97.01,76.2,0,0,0,0,0,41.7,5.8,18,Low
+PCL-MP-1029,Ujjain,Tribal Schedule V,74.98,3,40.25,92.19,129.0,0,0,0,0,0,11.5,10.6,33,Low
+PCL-MP-1030,Indore,Forest/Eco-sensitive,9.63,1,97.98,124.68,27.3,0,0,1,1,0,35.9,11.8,37,Low
+PCL-MP-1031,Indore,Agricultural,24.04,2,107.19,145.21,35.5,0,0,0,0,0,24.4,3.5,11,Low
+PCL-MP-1032,Bhopal,Agricultural,82.5,3,74.35,176.67,137.6,1,0,0,0,0,19.9,17.6,55,Medium
+PCL-MP-1033,Sehore,Agricultural,4.25,7,25.14,57.62,129.2,1,0,0,0,0,30.3,21.4,67,High
+PCL-MP-1034,Dewas,Agricultural,80.68,6,77.97,149.07,91.2,1,0,0,0,1,15.0,23.0,72,High
+PCL-MP-1035,Indore,Agricultural,79.96,3,77.32,107.19,38.6,0,1,0,0,1,19.6,10.9,34,Low
+PCL-MP-1036,Sehore,Private Commercial,27.73,4,62.58,78.84,26.0,0,0,0,0,0,8.1,7.0,22,Low
+PCL-MP-1037,Jabalpur,Private Commercial,8.39,2,82.19,104.85,27.6,2,0,0,0,0,21.6,18.2,57,Medium
+PCL-MP-1038,Ujjain,Forest/Eco-sensitive,38.98,2,86.06,129.67,50.7,2,0,0,1,0,39.9,23.7,74,High
+PCL-MP-1039,Ujjain,Government Wasteland,44.27,1,72.38,165.05,128.0,2,0,0,0,1,25.4,24.0,75,High
+PCL-MP-1040,Dewas,Government Wasteland,75.83,4,95.6,166.77,74.4,0,0,0,0,1,12.0,11.2,35,Low
+PCL-MP-1041,Ujjain,Forest/Eco-sensitive,41.45,2,48.34,51.35,6.2,0,0,1,1,1,6.7,15.7,49,Medium
+PCL-MP-1042,Indore,Agricultural,13.41,4,30.46,46.94,54.1,1,0,0,0,0,19.2,16.3,51,Medium
+PCL-MP-1043,Jabalpur,Agricultural,74.92,7,65.54,151.85,131.7,1,0,0,0,0,24.5,20.5,64,Medium
+PCL-MP-1044,Jabalpur,Private Commercial,51.47,2,66.5,89.49,34.6,0,0,0,0,1,36.0,6.1,19,Low
+PCL-MP-1045,Indore,Government Wasteland,45.63,4,75.31,143.94,91.1,1,0,0,0,1,12.1,18.9,59,Medium
+PCL-MP-1046,Dewas,Agricultural,28.12,7,48.65,113.32,132.9,1,0,0,0,0,2.8,22.4,70,High
+PCL-MP-1047,Bhopal,Forest/Eco-sensitive,55.57,1,105.72,130.99,23.9,2,1,0,1,1,10.2,27.8,87,High
+PCL-MP-1048,Jabalpur,Agricultural,31.67,2,91.11,108.19,18.7,0,0,0,0,0,26.1,2.2,7,Low
+PCL-MP-1049,Jabalpur,Agricultural,50.53,4,33.66,69.68,107.0,0,0,0,0,1,44.3,13.4,42,Medium
+PCL-MP-1050,Ujjain,Agricultural,45.52,6,30.86,58.29,88.9,1,0,0,0,1,16.6,24.6,77,High
+PCL-MP-1051,Indore,Agricultural,62.51,5,77.35,176.62,128.3,0,0,0,0,0,26.9,11.2,35,Low
+PCL-MP-1052,Dewas,Tribal Schedule V,70.7,4,48.71,78.11,60.4,0,0,0,0,1,22.5,10.2,32,Low
+PCL-MP-1053,Dewas,Forest/Eco-sensitive,29.26,3,72.24,122.74,69.9,2,0,1,1,1,21.7,32.0,100,High
+PCL-MP-1054,Jabalpur,Private Commercial,67.5,1,50.01,76.83,53.6,1,0,0,0,1,15.8,16.3,51,Medium
+PCL-MP-1055,Dewas,Forest/Eco-sensitive,23.39,3,44.6,89.02,99.6,1,0,0,1,1,33.4,24.0,75,High
+PCL-MP-1056,Dewas,Forest/Eco-sensitive,83.02,3,108.34,233.72,115.7,1,0,0,1,1,2.5,25.0,78,High
+PCL-MP-1057,Indore,Private Commercial,64.11,1,99.18,176.78,78.2,0,0,0,0,1,2.8,8.0,25,Low
+PCL-MP-1058,Ujjain,Private Commercial,69.97,4,66.8,119.35,78.7,0,1,0,0,0,42.7,13.4,42,Medium
+PCL-MP-1059,Sehore,Forest/Eco-sensitive,51.73,2,90.93,136.54,50.2,0,0,1,1,1,25.8,18.9,59,Medium
+PCL-MP-1060,Bhopal,Private Commercial,63.04,2,78.17,104.26,33.4,2,0,0,0,1,18.7,20.2,63,Medium
+PCL-MP-1061,Bhopal,Agricultural,60.24,8,31.05,40.01,28.9,1,0,0,0,0,9.3,15.7,49,Medium
+PCL-MP-1062,Bhopal,Private Commercial,55.23,3,95.26,100.36,5.4,1,0,0,0,1,13.3,13.8,43,Medium
+PCL-MP-1063,Jabalpur,Agricultural,23.5,8,62.21,113.05,81.7,0,0,0,0,1,1.7,20.2,63,Medium
+PCL-MP-1064,Indore,Government Wasteland,71.14,1,109.96,211.65,92.5,2,0,0,0,1,29.5,25.6,80,High
+PCL-MP-1065,Sehore,Agricultural,69.3,2,64.95,100.16,54.2,2,1,0,0,1,22.5,27.2,85,High
+PCL-MP-1066,Jabalpur,Government Wasteland,69.25,1,63.66,89.51,40.6,0,0,0,0,1,23.4,9.6,30,Low
+PCL-MP-1067,Sehore,Private Commercial,5.08,3,77.92,130.35,67.3,2,0,0,0,0,6.3,20.8,65,High
+PCL-MP-1068,Dewas,Agricultural,59.5,2,27.45,51.15,86.3,0,0,0,0,1,1.1,11.2,35,Low
+PCL-MP-1069,Ujjain,Tribal Schedule V,39.49,4,80.06,93.93,17.3,0,0,0,0,1,22.0,7.0,22,Low
+PCL-MP-1070,Raisen,Agricultural,47.08,7,41.2,74.95,81.9,0,1,0,0,1,34.9,23.0,72,High
+PCL-MP-1071,Ujjain,Private Commercial,69.84,3,86.71,187.67,116.4,0,0,0,0,0,20.4,9.0,28,Low
+PCL-MP-1072,Raisen,Agricultural,47.14,7,63.7,90.24,41.7,1,0,0,0,1,35.0,23.4,73,High
+PCL-MP-1073,Jabalpur,Tribal Schedule V,32.71,13,92.35,175.04,89.5,1,1,0,0,1,5.0,32.0,100,High
+PCL-MP-1074,Ujjain,Agricultural,44.94,8,26.3,30.48,15.9,0,0,0,0,1,35.3,10.9,34,Low
+PCL-MP-1075,Raisen,Private Commercial,72.47,4,106.1,197.22,85.9,0,0,0,0,1,28.0,16.0,50,Medium
+PCL-MP-1076,Indore,Private Commercial,78.32,2,88.48,139.73,57.9,1,0,0,0,1,31.4,16.3,51,Medium
+PCL-MP-1077,Ujjain,Agricultural,30.79,7,37.37,64.28,72.0,1,1,0,0,1,39.3,25.9,81,High
+PCL-MP-1078,Sehore,Forest/Eco-sensitive,42.55,2,44.74,83.89,87.5,1,0,1,1,1,24.8,31.4,98,High
+PCL-MP-1079,Sehore,Agricultural,81.79,5,63.83,88.6,38.8,0,0,0,0,1,17.5,11.2,35,Low
+PCL-MP-1080,Dewas,Private Commercial,84.38,3,26.86,57.84,115.3,2,0,0,0,0,43.8,25.9,81,High
+PCL-MP-1081,Ujjain,Tribal Schedule V,24.68,6,76.6,111.9,46.1,0,0,0,0,0,29.8,9.0,28,Low
+PCL-MP-1082,Ujjain,Agricultural,8.71,1,51.26,81.46,58.9,0,0,0,0,0,4.5,3.8,12,Low
+PCL-MP-1083,Indore,Agricultural,66.96,6,70.12,159.49,127.5,0,0,0,0,0,21.9,15.4,48,Medium
+PCL-MP-1084,Ujjain,Agricultural,74.05,2,64.81,68.65,5.9,0,0,0,0,1,30.5,2.2,7,Low
+PCL-MP-1085,Sehore,Agricultural,67.31,1,47.48,53.61,12.9,0,0,0,0,1,17.5,4.8,15,Low
+PCL-MP-1086,Jabalpur,Government Wasteland,9.66,2,65.08,120.29,84.8,0,0,0,0,0,27.6,7.7,24,Low
+PCL-MP-1087,Raisen,Tribal Schedule V,26.04,9,34.92,35.47,1.6,1,1,1,0,1,17.8,28.2,88,High
+PCL-MP-1088,Dewas,Forest/Eco-sensitive,63.3,4,74.92,150.11,100.4,0,0,0,1,1,42.3,17.6,55,Medium
+PCL-MP-1089,Indore,Agricultural,80.82,6,33.45,65.03,94.4,1,0,0,0,1,8.9,25.6,80,High
+PCL-MP-1090,Bhopal,Government Wasteland,70.14,1,81.34,152.96,88.1,0,1,0,0,0,11.3,13.8,43,Medium
+PCL-MP-1091,Bhopal,Tribal Schedule V,47.33,12,43.36,95.87,121.1,2,0,1,0,0,6.9,32.0,100,High
+PCL-MP-1092,Indore,Private Commercial,67.97,1,81.19,80.17,-1.3,1,0,0,0,1,8.3,12.2,38,Medium
+PCL-MP-1093,Sehore,Agricultural,5.87,8,91.13,154.39,69.4,1,0,0,0,0,2.4,20.2,63,Medium
+PCL-MP-1094,Ujjain,Tribal Schedule V,56.18,7,63.93,150.1,134.8,1,0,0,0,1,41.0,25.0,78,High
+PCL-MP-1095,Sehore,Agricultural,11.16,6,57.38,104.21,81.6,1,0,0,0,0,35.8,20.5,64,Medium
+PCL-MP-1096,Bhopal,Tribal Schedule V,55.5,11,86.27,108.85,26.2,0,0,1,0,1,19.0,23.4,73,High
+PCL-MP-1097,Jabalpur,Agricultural,81.08,8,30.71,66.21,115.6,2,0,0,0,0,25.3,30.4,95,High
+PCL-MP-1098,Sehore,Government Wasteland,47.96,1,59.92,132.83,121.7,0,0,0,0,0,2.8,7.4,23,Low
+PCL-MP-1099,Bhopal,Private Commercial,18.48,4,44.06,48.77,10.7,0,0,0,0,0,26.0,4.5,14,Low
+PCL-MP-1100,Ujjain,Agricultural,47.9,1,76.76,146.14,90.4,0,1,0,0,1,34.4,16.6,52,Medium
+PCL-MP-1101,Indore,Tribal Schedule V,48.35,9,30.91,62.57,102.4,0,1,1,0,1,20.7,29.8,93,High
+PCL-MP-1102,Indore,Agricultural,61.47,2,100.08,117.65,17.6,0,1,0,0,1,20.2,7.7,24,Low
+PCL-MP-1103,Raisen,Agricultural,64.29,2,54.34,60.36,11.1,0,0,0,0,1,14.2,5.1,16,Low
+PCL-MP-1104,Indore,Agricultural,51.14,1,42.38,98.35,132.1,0,0,0,0,1,5.8,9.6,30,Low
+PCL-MP-1105,Indore,Agricultural,59.96,6,31.13,68.47,119.9,2,0,0,0,0,26.1,27.5,86,High
+PCL-MP-1106,Sehore,Agricultural,54.59,5,34.79,34.1,-2.0,1,0,0,0,0,41.4,13.8,43,Medium
+PCL-MP-1107,Indore,Agricultural,34.34,2,58.64,82.09,40.0,0,0,0,0,1,23.2,8.0,25,Low
+PCL-MP-1108,Bhopal,Private Commercial,16.88,3,54.84,128.29,133.9,0,1,0,0,1,11.9,18.2,57,Medium
+PCL-MP-1109,Ujjain,Forest/Eco-sensitive,15.47,4,64.44,113.89,76.7,1,0,1,1,0,14.9,25.3,79,High
+PCL-MP-1110,Jabalpur,Agricultural,37.66,8,62.59,86.94,38.9,2,0,0,0,1,20.6,29.8,93,High
+PCL-MP-1111,Bhopal,Private Commercial,83.09,1,77.28,130.24,68.5,0,0,0,0,0,40.4,5.4,17,Low
+PCL-MP-1112,Raisen,Tribal Schedule V,48.8,6,52.33,85.8,64.0,2,1,0,0,1,32.3,31.4,98,High
+PCL-MP-1113,Indore,Forest/Eco-sensitive,84.24,2,55.93,127.58,128.1,1,0,1,1,1,15.4,28.5,89,High
+PCL-MP-1114,Dewas,Agricultural,57.82,5,46.42,101.42,118.5,0,0,0,0,1,4.1,13.8,43,Medium
+PCL-MP-1115,Dewas,Government Wasteland,59.52,4,35.96,71.12,97.8,1,0,0,0,1,6.2,18.9,59,Medium
+PCL-MP-1116,Jabalpur,Tribal Schedule V,62.93,13,102.56,111.33,8.6,0,0,1,0,1,42.8,21.1,66,High
+PCL-MP-1117,Indore,Agricultural,12.12,2,50.14,104.93,109.3,0,0,0,0,0,33.4,10.6,33,Low
+PCL-MP-1118,Sehore,Agricultural,28.96,3,75.77,88.93,17.4,1,0,0,0,0,32.6,10.6,33,Low
+PCL-MP-1119,Jabalpur,Agricultural,38.03,5,88.95,185.6,108.7,2,0,0,0,0,40.7,26.6,83,High
+PCL-MP-1120,Indore,Agricultural,80.53,8,64.24,87.27,35.8,1,0,0,0,0,36.2,17.6,55,Medium
+PCL-MP-1121,Jabalpur,Private Commercial,31.87,1,85.47,145.13,69.8,2,1,0,0,1,23.3,27.2,85,High
+PCL-MP-1122,Ujjain,Agricultural,80.47,4,94.42,210.81,123.3,0,0,0,0,1,17.1,13.8,43,Medium
+PCL-MP-1123,Indore,Agricultural,79.15,6,92.27,106.07,15.0,1,0,0,0,1,31.9,16.3,51,Medium
+PCL-MP-1124,Raisen,Private Commercial,77.04,1,46.75,101.01,116.1,0,0,0,0,1,5.4,10.6,33,Low
+PCL-MP-1125,Bhopal,Agricultural,54.49,8,30.34,65.63,116.3,1,0,0,0,1,32.5,26.9,84,High
+PCL-MP-1126,Dewas,Agricultural,52.45,4,73.51,89.8,22.2,0,0,0,0,1,42.9,6.7,21,Low
+PCL-MP-1127,Sehore,Private Commercial,33.49,4,28.7,43.37,51.1,1,0,0,0,1,11.2,17.6,55,Medium
+PCL-MP-1128,Jabalpur,Private Commercial,65.69,3,36.34,53.09,46.1,0,0,0,0,0,31.0,8.3,26,Low
+PCL-MP-1129,Indore,Tribal Schedule V,5.83,10,28.14,34.96,24.2,0,0,1,0,1,18.2,21.1,66,High
+PCL-MP-1130,Ujjain,Private Commercial,21.91,2,49.32,108.51,120.0,1,0,0,0,0,19.9,14.7,46,Medium
+PCL-MP-1131,Raisen,Agricultural,16.29,8,56.22,118.4,110.6,2,0,0,0,1,44.8,32.0,100,High
+PCL-MP-1132,Indore,Private Commercial,27.64,1,52.87,72.89,37.9,0,0,0,0,1,20.3,3.5,11,Low
+PCL-MP-1133,Dewas,Private Commercial,37.25,1,31.38,58.82,87.4,1,0,0,0,0,6.9,15.4,48,Medium
+PCL-MP-1134,Sehore,Forest/Eco-sensitive,37.53,2,30.71,63.84,107.9,1,0,1,1,1,42.7,27.2,85,High
+PCL-MP-1135,Sehore,Agricultural,31.51,6,80.21,105.23,31.2,1,0,0,0,1,25.5,19.5,61,Medium
+PCL-MP-1136,Dewas,Forest/Eco-sensitive,59.99,2,109.69,149.63,36.4,0,0,1,1,0,20.6,14.1,44,Medium
+PCL-MP-1137,Bhopal,Tribal Schedule V,82.26,8,81.77,161.81,97.9,1,0,1,0,0,31.7,27.5,86,High
+PCL-MP-1138,Indore,Forest/Eco-sensitive,43.49,1,108.74,228.19,109.8,1,0,1,1,1,44.2,29.4,92,High
+PCL-MP-1139,Bhopal,Agricultural,84.97,8,69.68,143.91,106.5,0,1,0,0,0,29.1,22.4,70,High
+PCL-MP-1140,Raisen,Private Commercial,44.22,2,99.63,207.37,108.1,0,1,0,0,0,19.8,14.1,44,Medium
+PCL-MP-1141,Bhopal,Private Commercial,26.2,2,52.43,103.73,97.8,1,0,0,0,0,11.7,15.7,49,Medium
+PCL-MP-1142,Jabalpur,Government Wasteland,23.69,3,77.23,83.83,8.5,0,0,0,0,1,8.1,3.5,11,Low
+PCL-MP-1143,Dewas,Tribal Schedule V,48.13,3,31.9,74.18,132.5,0,0,1,0,1,28.0,17.0,53,Medium
+PCL-MP-1144,Bhopal,Private Commercial,53.5,3,79.56,110.43,38.8,1,0,0,0,1,31.1,15.4,48,Medium
+PCL-MP-1145,Raisen,Agricultural,51.76,6,98.23,138.8,41.3,0,0,0,0,1,34.3,14.4,45,Medium
+PCL-MP-1146,Sehore,Private Commercial,27.47,4,35.41,56.72,60.2,2,0,0,0,0,19.1,24.6,77,High
+PCL-MP-1147,Ujjain,Agricultural,49.31,6,41.14,48.59,18.1,0,0,0,0,0,22.6,4.8,15,Low
+PCL-MP-1148,Bhopal,Government Wasteland,43.21,2,43.29,63.28,46.2,1,0,0,0,1,21.4,13.4,42,Medium
+PCL-MP-1149,Raisen,Agricultural,22.85,6,89.93,133.15,48.1,1,1,0,0,1,3.8,24.6,77,High
+PCL-MP-1150,Sehore,Private Commercial,46.96,1,35.94,39.18,9.0,0,0,0,0,1,16.8,4.2,13,Low
+PCL-MP-1151,Raisen,Private Commercial,4.33,2,85.66,181.24,111.6,0,1,0,0,0,40.2,15.0,47,Medium
+PCL-MP-1152,Indore,Agricultural,52.3,3,58.4,107.69,84.4,0,0,0,0,1,23.2,11.5,36,Low
+PCL-MP-1153,Raisen,Tribal Schedule V,31.63,13,34.32,53.33,55.4,1,0,1,0,1,12.3,32.0,100,High
+PCL-MP-1154,Jabalpur,Forest/Eco-sensitive,66.09,2,86.32,155.04,79.6,1,0,0,1,1,30.8,22.7,71,High
+PCL-MP-1155,Bhopal,Agricultural,37.77,7,37.87,73.89,95.1,1,0,0,0,0,33.2,22.1,69,High
+PCL-MP-1156,Bhopal,Forest/Eco-sensitive,44.33,3,109.84,180.54,64.4,1,0,1,1,1,30.6,27.8,87,High
+PCL-MP-1157,Ujjain,Forest/Eco-sensitive,52.05,2,106.37,144.08,35.5,0,0,0,1,0,31.9,5.8,18,Low
+PCL-MP-1158,Jabalpur,Forest/Eco-sensitive,27.29,3,72.64,167.44,130.5,0,0,1,1,1,40.4,21.8,68,High
+PCL-MP-1159,Ujjain,Tribal Schedule V,25.04,7,106.2,113.06,6.5,0,0,0,0,1,37.3,10.6,33,Low
+PCL-MP-1160,Dewas,Government Wasteland,59.33,2,34.28,69.39,102.4,2,0,0,0,1,10.9,26.9,84,High
+PCL-MP-1161,Raisen,Agricultural,65.63,1,106.98,253.33,136.8,1,0,0,0,1,29.4,18.6,58,Medium
+PCL-MP-1162,Ujjain,Government Wasteland,27.64,1,102.17,110.31,8.0,0,0,0,0,0,42.2,0.6,2,Low
+PCL-MP-1163,Ujjain,Agricultural,78.21,7,91.98,112.23,22.0,0,0,0,0,1,2.2,11.8,37,Low
+PCL-MP-1164,Dewas,Private Commercial,9.57,3,49.19,117.28,138.4,1,0,0,0,0,38.4,16.0,50,Medium
+PCL-MP-1165,Bhopal,Agricultural,62.28,5,86.08,83.53,-3.0,1,0,0,0,1,27.7,15.0,47,Medium
+PCL-MP-1166,Jabalpur,Tribal Schedule V,70.38,11,52.87,80.95,53.1,1,0,0,0,1,17.6,25.0,78,High
+PCL-MP-1167,Dewas,Agricultural,61.58,1,47.23,69.49,47.1,0,0,0,0,1,7.6,8.0,25,Low
+PCL-MP-1168,Jabalpur,Private Commercial,76.14,3,83.67,156.98,87.6,0,0,0,0,1,43.1,11.8,37,Low
+PCL-MP-1169,Sehore,Agricultural,59.81,8,89.37,188.83,111.3,0,0,0,0,1,27.0,18.9,59,Medium
+PCL-MP-1170,Ujjain,Agricultural,38.25,6,31.64,55.94,76.8,1,0,0,0,1,7.2,19.5,61,Medium
+PCL-MP-1171,Bhopal,Forest/Eco-sensitive,61.08,4,32.73,55.32,69.0,0,0,1,1,1,3.1,22.1,69,High
+PCL-MP-1172,Raisen,Forest/Eco-sensitive,26.54,1,58.66,125.17,113.4,0,0,1,1,1,3.3,23.4,73,High
+PCL-MP-1173,Bhopal,Government Wasteland,40.39,3,59.75,123.38,106.5,0,0,0,0,1,19.2,13.1,41,Medium
+PCL-MP-1174,Raisen,Agricultural,78.0,7,56.93,110.44,94.0,1,0,0,0,1,8.4,23.0,72,High
+PCL-MP-1175,Jabalpur,Government Wasteland,71.04,1,108.17,175.38,62.1,0,0,0,0,1,10.7,7.4,23,Low
+PCL-MP-1176,Raisen,Agricultural,23.79,2,27.74,52.91,90.7,0,0,0,0,0,11.2,10.2,32,Low
+PCL-MP-1177,Raisen,Private Commercial,59.93,1,45.8,46.45,1.4,0,0,0,0,0,35.0,0.6,2,Low
+PCL-MP-1178,Indore,Private Commercial,24.94,3,74.09,153.38,107.0,0,0,0,0,0,44.4,8.6,27,Low
+PCL-MP-1179,Dewas,Agricultural,80.65,3,78.21,122.75,56.9,1,0,0,0,1,35.5,16.6,52,Medium
+PCL-MP-1180,Dewas,Forest/Eco-sensitive,35.0,3,57.0,116.5,104.4,1,0,0,1,0,41.2,17.6,55,Medium
+PCL-MP-1181,Sehore,Private Commercial,33.32,3,42.28,79.81,88.8,0,0,0,0,1,32.7,11.8,37,Low
+PCL-MP-1182,Indore,Agricultural,32.37,1,99.26,121.38,22.3,0,0,0,0,1,21.8,6.1,19,Low
+PCL-MP-1183,Bhopal,Agricultural,16.56,2,88.48,180.83,104.4,0,0,0,0,0,18.2,8.0,25,Low
+PCL-MP-1184,Indore,Private Commercial,66.03,4,64.63,122.19,89.1,1,0,0,0,1,36.2,20.8,65,High
+PCL-MP-1185,Dewas,Tribal Schedule V,31.82,9,28.89,63.64,120.3,0,1,1,0,1,32.5,28.2,88,High
+PCL-MP-1186,Dewas,Agricultural,28.37,7,73.43,95.92,30.6,0,0,0,0,1,34.5,10.2,32,Low
+PCL-MP-1187,Jabalpur,Private Commercial,14.72,3,39.39,78.56,99.4,1,0,0,0,0,29.1,17.0,53,Medium
+PCL-MP-1188,Bhopal,Private Commercial,71.4,1,105.34,202.14,91.9,0,0,0,0,0,10.8,7.7,24,Low
+PCL-MP-1189,Sehore,Private Commercial,5.61,4,81.04,78.84,-2.7,0,0,0,0,0,1.2,3.2,10,Low
+PCL-MP-1190,Jabalpur,Agricultural,83.1,1,67.69,132.8,96.2,1,1,0,0,0,23.8,19.5,61,Medium
+PCL-MP-1191,Dewas,Tribal Schedule V,23.09,9,31.72,74.26,134.1,2,0,1,0,0,4.1,32.0,100,High
+PCL-MP-1192,Ujjain,Private Commercial,3.18,4,57.24,100.25,75.1,2,1,0,0,0,22.7,24.6,77,High
+PCL-MP-1193,Sehore,Government Wasteland,82.79,1,44.53,100.5,125.7,0,0,0,0,1,41.6,11.8,37,Low
+PCL-MP-1194,Jabalpur,Government Wasteland,76.49,1,40.25,87.87,118.3,2,0,0,0,0,37.0,22.7,71,High
+PCL-MP-1195,Sehore,Agricultural,71.03,7,82.55,143.13,73.4,1,0,0,0,1,4.0,21.1,66,High
+PCL-MP-1196,Jabalpur,Government Wasteland,5.04,4,44.73,47.42,6.0,0,0,0,0,0,27.0,4.5,14,Low
+PCL-MP-1197,Jabalpur,Agricultural,84.37,8,44.39,77.77,75.2,2,0,0,0,1,34.9,29.4,92,High
+PCL-MP-1198,Dewas,Forest/Eco-sensitive,60.76,1,47.78,71.72,50.1,0,1,1,1,1,4.6,23.4,73,High
+PCL-MP-1199,Ujjain,Agricultural,11.7,3,61.63,108.32,75.8,2,1,0,0,0,25.2,25.0,78,High
+PCL-MP-1200,Sehore,Private Commercial,27.91,4,26.05,40.38,55.0,0,0,0,0,1,44.7,11.2,35,Low
+PCL-MP-1201,Jabalpur,Agricultural,12.23,5,47.81,55.54,16.2,1,0,0,0,0,35.3,13.1,41,Medium
+PCL-MP-1202,Dewas,Agricultural,21.34,8,75.47,93.1,23.4,1,0,0,0,1,28.1,20.8,65,High
+PCL-MP-1203,Dewas,Agricultural,70.09,3,50.54,92.22,82.5,0,0,0,0,1,18.2,12.2,38,Medium
+PCL-MP-1204,Dewas,Agricultural,59.22,8,107.26,223.52,108.4,1,0,0,0,1,42.0,27.2,85,High
+PCL-MP-1205,Indore,Forest/Eco-sensitive,46.98,4,105.15,131.86,25.4,0,0,1,1,0,35.9,19.5,61,Medium
+PCL-MP-1206,Jabalpur,Private Commercial,54.02,2,46.48,54.54,17.3,0,0,0,0,1,27.1,2.9,9,Low
+PCL-MP-1207,Ujjain,Forest/Eco-sensitive,46.44,3,84.64,180.1,112.8,0,0,1,1,1,30.1,22.1,69,High
+PCL-MP-1208,Indore,Private Commercial,4.24,4,107.18,153.35,43.1,0,1,0,0,0,4.9,13.1,41,Medium
+PCL-MP-1209,Sehore,Private Commercial,49.11,4,56.8,92.1,62.1,0,0,0,0,1,44.9,13.1,41,Medium
+PCL-MP-1210,Raisen,Agricultural,35.65,2,34.87,80.69,131.4,1,0,0,0,1,22.0,17.6,55,Medium
+PCL-MP-1211,Jabalpur,Private Commercial,6.18,1,93.87,104.84,11.7,0,0,0,0,0,30.6,0.3,1,Low
+PCL-MP-1212,Indore,Government Wasteland,63.07,2,71.91,102.83,43.0,0,0,0,0,0,28.5,6.4,20,Low
+PCL-MP-1213,Raisen,Agricultural,52.39,4,63.21,99.42,57.3,2,0,0,0,0,35.9,23.7,74,High
+PCL-MP-1214,Sehore,Agricultural,74.18,3,56.09,69.31,23.6,1,0,0,0,0,14.4,10.6,33,Low
+PCL-MP-1215,Bhopal,Agricultural,71.95,3,94.17,185.86,97.4,1,1,0,0,1,5.7,25.9,81,High
+PCL-MP-1216,Dewas,Agricultural,32.04,3,68.42,106.49,55.6,1,1,0,0,1,31.4,18.6,58,Medium
+PCL-MP-1217,Sehore,Agricultural,24.91,3,51.74,82.99,60.4,1,1,0,0,1,36.8,17.3,54,Medium
+PCL-MP-1218,Sehore,Private Commercial,42.32,4,60.33,130.79,116.8,2,1,0,0,0,13.5,29.8,93,High
+PCL-MP-1219,Indore,Forest/Eco-sensitive,48.3,4,71.73,79.92,11.4,1,0,1,1,0,2.4,21.4,67,High
+PCL-MP-1220,Jabalpur,Agricultural,18.97,7,33.71,72.6,115.4,0,0,0,0,0,20.5,13.1,41,Medium
+PCL-MP-1221,Raisen,Tribal Schedule V,10.42,6,42.84,86.52,102.0,1,0,1,0,1,35.4,31.0,97,High
+PCL-MP-1222,Ujjain,Agricultural,5.52,6,70.24,127.52,81.5,1,0,0,0,0,26.0,21.8,68,High
+PCL-MP-1223,Jabalpur,Tribal Schedule V,11.96,9,103.1,246.32,138.9,0,1,0,0,1,32.2,24.3,76,High
+PCL-MP-1224,Ujjain,Agricultural,71.78,7,66.6,119.03,78.7,1,0,0,0,1,39.7,22.7,71,High
+PCL-MP-1225,Dewas,Forest/Eco-sensitive,74.63,4,105.77,150.68,42.5,1,0,0,1,1,30.1,22.7,71,High
+PCL-MP-1226,Dewas,Tribal Schedule V,67.73,9,43.52,68.46,57.3,1,0,1,0,1,25.7,28.2,88,High
+PCL-MP-1227,Jabalpur,Forest/Eco-sensitive,4.38,4,26.38,60.61,129.8,1,0,1,1,0,44.8,27.8,87,High
+PCL-MP-1228,Indore,Tribal Schedule V,26.01,7,32.93,48.49,47.3,1,0,1,0,1,32.8,27.2,85,High
+PCL-MP-1229,Bhopal,Forest/Eco-sensitive,0.59,4,31.62,57.26,81.1,1,1,1,1,0,5.9,31.0,97,High
+PCL-MP-1230,Ujjain,Agricultural,11.67,2,44.46,48.0,8.0,0,1,0,0,0,16.9,5.4,17,Low
+PCL-MP-1231,Ujjain,Forest/Eco-sensitive,11.75,2,30.81,54.43,76.7,0,1,1,1,0,10.0,21.1,66,High
+PCL-MP-1232,Jabalpur,Agricultural,35.29,8,98.1,105.53,7.6,1,0,0,0,1,43.4,17.9,56,Medium
+PCL-MP-1233,Dewas,Private Commercial,21.47,3,91.21,177.97,95.1,0,0,0,0,1,23.5,13.8,43,Medium
+PCL-MP-1234,Sehore,Agricultural,33.6,1,91.62,192.49,110.1,1,0,0,0,1,3.7,17.9,56,Medium
+PCL-MP-1235,Dewas,Government Wasteland,11.65,4,56.06,108.77,94.0,0,0,0,0,0,34.8,10.9,34,Low
+PCL-MP-1236,Bhopal,Private Commercial,1.67,2,28.39,29.46,3.8,0,0,0,0,0,28.5,0.0,0,Low
+PCL-MP-1237,Jabalpur,Agricultural,54.63,3,48.58,67.98,39.9,0,0,0,0,0,24.4,4.5,14,Low
+PCL-MP-1238,Raisen,Private Commercial,64.99,1,51.36,81.37,58.4,0,0,0,0,1,41.6,9.0,28,Low
+PCL-MP-1239,Bhopal,Agricultural,63.17,3,35.15,69.47,97.6,0,1,0,0,0,23.8,16.0,50,Medium
+PCL-MP-1240,Ujjain,Tribal Schedule V,22.41,8,35.79,74.54,108.3,1,0,1,0,0,12.6,30.1,94,High
+PCL-MP-1241,Sehore,Private Commercial,42.42,3,29.71,65.25,119.6,2,0,0,0,0,30.5,24.6,77,High
+PCL-MP-1242,Bhopal,Agricultural,43.5,1,97.99,94.84,-3.2,1,0,0,0,1,43.2,12.5,39,Medium
+PCL-MP-1243,Jabalpur,Forest/Eco-sensitive,35.94,3,46.1,105.02,127.8,1,0,1,1,1,2.8,30.4,95,High
+PCL-MP-1244,Indore,Tribal Schedule V,83.43,9,30.86,50.13,62.4,1,0,1,0,1,9.4,28.5,89,High
+PCL-MP-1245,Sehore,Agricultural,31.62,8,109.81,227.86,107.5,0,0,0,0,0,7.2,15.0,47,Medium
+PCL-MP-1246,Raisen,Agricultural,46.26,1,105.83,100.76,-4.8,0,0,0,0,0,5.1,0.0,0,Low
+PCL-MP-1247,Raisen,Government Wasteland,82.68,2,85.49,92.75,8.5,0,0,0,0,1,31.7,4.2,13,Low
+PCL-MP-1248,Dewas,Private Commercial,63.7,1,67.96,127.35,87.4,1,1,0,0,1,6.3,22.1,69,High
+PCL-MP-1249,Ujjain,Agricultural,70.8,6,52.03,69.95,34.4,2,0,0,0,1,7.4,27.5,86,High
+PCL-MP-1250,Indore,Agricultural,27.04,2,70.55,165.7,134.9,1,0,0,0,1,7.5,18.2,57,Medium
+PCL-MP-1251,Jabalpur,Private Commercial,18.67,3,37.61,74.51,98.1,0,0,0,0,1,13.8,10.9,34,Low
+PCL-MP-1252,Ujjain,Government Wasteland,3.13,4,97.64,171.47,75.6,2,0,0,0,0,35.8,22.4,70,High
+PCL-MP-1253,Ujjain,Government Wasteland,11.55,4,56.64,105.57,86.4,0,0,0,0,0,12.0,11.2,35,Low
+PCL-MP-1254,Ujjain,Agricultural,84.76,4,101.71,162.02,59.3,1,0,0,0,1,2.4,17.3,54,Medium
+PCL-MP-1255,Sehore,Agricultural,61.71,8,27.51,53.39,94.1,2,1,0,0,1,39.8,32.0,100,High
+PCL-MP-1256,Bhopal,Private Commercial,52.63,3,67.41,150.33,123.0,2,0,0,0,1,29.1,27.5,86,High
+PCL-MP-1257,Ujjain,Private Commercial,2.15,4,91.46,134.51,47.1,0,0,0,0,0,41.1,7.0,22,Low
+PCL-MP-1258,Sehore,Agricultural,23.35,1,52.1,66.04,26.8,0,0,0,0,1,44.6,3.2,10,Low
+PCL-MP-1259,Indore,Government Wasteland,8.96,2,47.65,101.67,113.4,0,0,0,0,0,44.8,8.3,26,Low
+PCL-MP-1260,Indore,Private Commercial,83.54,4,55.16,119.52,116.7,0,1,0,0,1,36.4,18.2,57,Medium
+PCL-MP-1261,Bhopal,Forest/Eco-sensitive,30.22,2,72.86,89.1,22.3,0,0,1,1,1,22.3,13.4,42,Medium
+PCL-MP-1262,Bhopal,Agricultural,51.34,1,69.75,66.33,-4.9,0,0,0,0,1,32.4,5.4,17,Low
+PCL-MP-1263,Dewas,Agricultural,12.98,3,90.82,197.75,117.7,0,0,0,0,0,17.1,8.6,27,Low
+PCL-MP-1264,Jabalpur,Agricultural,9.04,5,52.42,123.97,136.5,0,0,0,0,0,28.9,11.2,35,Low
+PCL-MP-1265,Jabalpur,Government Wasteland,59.11,3,43.98,79.34,80.4,1,0,0,0,1,32.9,20.2,63,Medium
+PCL-MP-1266,Jabalpur,Government Wasteland,33.59,1,40.48,57.13,41.1,0,0,0,0,1,5.1,6.4,20,Low
+PCL-MP-1267,Bhopal,Agricultural,83.51,3,79.08,185.56,134.6,0,0,0,0,0,15.4,9.9,31,Low
+PCL-MP-1268,Bhopal,Agricultural,21.59,2,54.79,114.58,109.1,0,1,0,0,1,19.2,17.6,55,Medium
+PCL-MP-1269,Raisen,Agricultural,32.22,8,92.04,164.58,78.8,0,0,0,0,1,36.1,16.6,52,Medium
+PCL-MP-1270,Bhopal,Agricultural,27.43,2,31.31,37.47,19.7,0,0,0,0,1,40.5,5.8,18,Low
+PCL-MP-1271,Sehore,Tribal Schedule V,60.03,9,105.11,125.0,18.9,0,1,1,0,1,9.0,23.7,74,High
+PCL-MP-1272,Jabalpur,Private Commercial,78.71,3,81.15,112.09,38.1,1,0,0,0,1,2.9,15.4,48,Medium
+PCL-MP-1273,Ujjain,Forest/Eco-sensitive,51.22,2,33.24,41.55,25.0,0,0,1,1,1,35.4,16.3,51,Medium
+PCL-MP-1274,Raisen,Private Commercial,56.36,1,79.56,120.29,51.2,1,1,0,0,1,20.1,19.2,60,Medium
+PCL-MP-1275,Sehore,Agricultural,64.06,2,32.29,46.77,44.8,0,0,0,0,1,25.1,11.2,35,Low
+PCL-MP-1276,Ujjain,Agricultural,44.66,8,73.68,95.17,29.2,1,0,0,0,1,25.9,18.6,58,Medium
+PCL-MP-1277,Sehore,Agricultural,80.71,8,39.69,94.36,137.7,0,0,0,0,1,19.3,18.6,58,Medium
+PCL-MP-1278,Jabalpur,Agricultural,84.77,3,95.9,126.97,32.4,0,0,0,0,1,17.8,6.7,21,Low
+PCL-MP-1279,Dewas,Private Commercial,78.0,1,91.86,170.26,85.3,0,0,0,0,1,7.1,11.5,36,Low
+PCL-MP-1280,Sehore,Private Commercial,82.03,1,103.62,182.98,76.6,1,0,0,0,1,18.8,13.8,43,Medium
+PCL-MP-1281,Sehore,Private Commercial,15.05,4,37.23,68.23,83.3,0,1,0,0,0,15.3,17.0,53,Medium
+PCL-MP-1282,Indore,Agricultural,40.66,5,101.25,99.16,-2.1,0,0,0,0,1,22.4,7.4,23,Low
+PCL-MP-1283,Ujjain,Agricultural,25.89,8,90.79,128.49,41.5,0,0,0,0,1,20.2,15.0,47,Medium
+PCL-MP-1284,Ujjain,Agricultural,41.44,6,94.79,160.87,69.7,1,0,0,0,1,38.4,20.5,64,Medium
+PCL-MP-1285,Indore,Tribal Schedule V,17.46,3,46.21,74.48,61.2,0,0,1,0,0,23.0,12.2,38,Medium
+PCL-MP-1286,Jabalpur,Government Wasteland,58.06,2,56.66,102.63,81.1,1,0,0,0,1,7.8,20.8,65,High
+PCL-MP-1287,Jabalpur,Agricultural,2.82,1,38.85,69.14,78.0,0,0,0,0,0,29.3,3.2,10,Low
+PCL-MP-1288,Jabalpur,Agricultural,55.56,1,98.49,231.68,135.2,0,0,0,0,1,8.2,11.2,35,Low
+PCL-MP-1289,Sehore,Tribal Schedule V,26.31,14,79.63,124.58,56.4,1,0,1,0,1,37.2,32.0,100,High
+PCL-MP-1290,Raisen,Private Commercial,1.12,3,72.72,131.69,81.1,1,0,0,0,0,15.5,16.6,52,Medium
+PCL-MP-1291,Dewas,Agricultural,60.59,5,41.01,69.72,70.0,2,0,0,0,0,18.5,24.0,75,High
+PCL-MP-1292,Dewas,Forest/Eco-sensitive,61.45,4,109.78,145.59,32.6,0,0,1,1,0,26.0,16.0,50,Medium
+PCL-MP-1293,Indore,Forest/Eco-sensitive,54.44,4,102.05,196.37,92.4,1,0,0,1,1,4.8,26.9,84,High
+PCL-MP-1294,Indore,Forest/Eco-sensitive,61.78,2,105.49,237.82,125.4,0,0,1,1,0,19.2,19.2,60,Medium
+PCL-MP-1295,Sehore,Agricultural,72.43,8,29.56,55.27,87.0,1,0,0,0,1,5.8,25.0,78,High
+PCL-MP-1296,Jabalpur,Agricultural,25.71,1,99.02,115.72,16.9,0,0,0,0,0,40.2,0.6,2,Low
+PCL-MP-1297,Ujjain,Forest/Eco-sensitive,66.32,4,53.27,126.82,138.1,2,0,1,1,0,26.1,32.0,100,High
+PCL-MP-1298,Indore,Private Commercial,65.02,1,36.0,56.84,57.9,1,0,0,0,1,24.3,14.4,45,Medium
+PCL-MP-1299,Dewas,Forest/Eco-sensitive,45.37,1,82.52,153.38,85.9,1,0,1,1,1,26.7,24.3,76,High
+PCL-MP-1300,Indore,Agricultural,4.36,5,63.75,108.66,70.4,1,0,0,0,0,6.5,17.6,55,Medium
+PCL-MP-1301,Ujjain,Agricultural,80.61,7,26.63,33.96,27.5,0,0,0,0,1,23.0,12.2,38,Medium
+PCL-MP-1302,Bhopal,Agricultural,55.47,1,56.89,106.87,87.9,0,0,0,0,1,2.6,12.8,40,Medium
+PCL-MP-1303,Bhopal,Forest/Eco-sensitive,35.72,4,35.51,46.75,31.7,0,0,0,1,1,19.2,14.1,44,Medium
+PCL-MP-1304,Bhopal,Forest/Eco-sensitive,23.31,2,60.6,136.53,125.3,0,0,1,1,0,22.6,16.6,52,Medium
+PCL-MP-1305,Ujjain,Private Commercial,17.54,4,50.1,50.46,0.7,0,0,0,0,0,15.2,1.9,6,Low
+PCL-MP-1306,Bhopal,Agricultural,8.02,2,95.99,184.31,92.0,2,0,0,0,0,32.7,23.7,74,High
+PCL-MP-1307,Indore,Private Commercial,83.08,3,64.46,70.57,9.5,2,0,0,0,0,14.4,17.0,53,Medium
+PCL-MP-1308,Jabalpur,Agricultural,72.43,1,25.82,29.71,15.1,0,0,0,0,0,43.0,0.0,0,Low
+PCL-MP-1309,Dewas,Tribal Schedule V,15.95,9,59.02,95.14,61.2,0,0,1,0,1,39.9,24.3,76,High
+PCL-MP-1310,Indore,Agricultural,59.33,1,108.43,235.76,117.4,1,0,0,0,1,20.0,16.3,51,Medium
+PCL-MP-1311,Sehore,Agricultural,58.34,3,66.06,109.51,65.8,0,0,0,0,1,29.6,8.6,27,Low
+PCL-MP-1312,Bhopal,Forest/Eco-sensitive,57.78,2,108.12,207.73,92.1,1,0,1,1,1,11.6,27.5,86,High
+PCL-MP-1313,Raisen,Agricultural,70.33,1,25.99,59.9,130.5,0,0,0,0,1,7.9,12.5,39,Medium
+PCL-MP-1314,Ujjain,Private Commercial,20.86,3,29.28,37.27,27.3,0,0,0,0,1,20.9,8.0,25,Low
+PCL-MP-1315,Ujjain,Private Commercial,27.21,4,88.35,86.21,-2.4,0,1,0,0,1,37.3,9.9,31,Low
+PCL-MP-1316,Ujjain,Private Commercial,52.81,3,100.66,177.7,76.5,0,0,0,0,1,37.2,10.9,34,Low
+PCL-MP-1317,Dewas,Private Commercial,52.87,4,85.92,126.88,47.7,0,1,0,0,1,0.6,13.4,42,Medium
+PCL-MP-1318,Dewas,Tribal Schedule V,81.99,7,71.55,106.76,49.2,1,0,0,0,0,18.7,18.2,57,Medium
+PCL-MP-1319,Bhopal,Government Wasteland,33.7,4,95.09,116.61,22.6,1,1,0,0,1,30.4,21.4,67,High
+PCL-MP-1320,Bhopal,Forest/Eco-sensitive,38.57,2,106.93,102.26,-4.4,0,0,1,1,1,41.6,14.4,45,Medium
+PCL-MP-1321,Jabalpur,Private Commercial,62.23,2,33.8,64.34,90.4,0,0,0,0,0,19.1,6.1,19,Low
+PCL-MP-1322,Sehore,Tribal Schedule V,64.92,7,58.82,85.12,44.7,1,1,1,0,0,23.3,29.8,93,High
+PCL-MP-1323,Dewas,Forest/Eco-sensitive,79.55,2,42.08,78.06,85.5,1,0,0,1,1,43.1,21.4,67,High
+PCL-MP-1324,Sehore,Private Commercial,54.32,1,89.67,158.3,76.5,0,0,0,0,0,30.5,5.8,18,Low
+PCL-MP-1325,Ujjain,Agricultural,1.58,2,27.15,31.51,16.1,0,1,0,0,0,33.9,4.8,15,Low
+PCL-MP-1326,Indore,Government Wasteland,58.25,2,96.35,188.01,95.1,1,1,0,0,0,5.1,22.1,69,High
+PCL-MP-1327,Ujjain,Agricultural,55.18,7,45.2,94.34,108.7,0,0,0,0,1,41.7,16.0,50,Medium
+PCL-MP-1328,Raisen,Agricultural,67.1,6,107.1,110.1,2.8,0,0,0,0,0,38.8,4.8,15,Low
+PCL-MP-1329,Jabalpur,Forest/Eco-sensitive,55.22,2,90.97,213.62,134.8,2,0,1,1,1,23.4,32.0,100,High
+PCL-MP-1330,Raisen,Agricultural,24.08,5,36.06,64.79,79.7,1,0,0,0,1,7.3,18.9,59,Medium
+PCL-MP-1331,Jabalpur,Private Commercial,56.43,4,92.14,161.04,74.8,1,0,0,0,0,23.7,15.4,48,Medium
+PCL-MP-1332,Ujjain,Private Commercial,35.65,4,32.82,41.71,27.1,1,0,0,0,1,34.0,11.5,36,Low
+PCL-MP-1333,Ujjain,Forest/Eco-sensitive,55.37,1,81.86,130.67,59.6,0,0,1,1,0,30.9,13.1,41,Medium
+PCL-MP-1334,Dewas,Agricultural,67.78,2,57.8,100.19,73.3,1,0,0,0,1,36.2,15.4,48,Medium
+PCL-MP-1335,Jabalpur,Agricultural,43.92,2,39.23,91.66,133.6,0,1,0,0,1,30.3,17.0,53,Medium
+PCL-MP-1336,Ujjain,Agricultural,58.42,2,42.47,91.38,115.2,0,0,0,0,1,36.8,13.8,43,Medium
+PCL-MP-1337,Bhopal,Private Commercial,28.53,1,31.23,37.73,20.8,0,1,0,0,0,41.0,8.0,25,Low
+PCL-MP-1338,Raisen,Agricultural,53.75,7,51.89,78.6,51.5,2,0,0,0,1,33.7,30.7,96,High
+PCL-MP-1339,Dewas,Government Wasteland,9.47,3,76.56,103.98,35.8,0,0,0,0,0,37.1,5.1,16,Low
+PCL-MP-1340,Bhopal,Private Commercial,45.58,2,88.47,186.26,110.5,0,0,0,0,1,13.8,14.4,45,Medium
+PCL-MP-1341,Ujjain,Forest/Eco-sensitive,32.03,1,72.05,126.44,75.5,2,0,1,1,0,14.1,25.9,81,High
+PCL-MP-1342,Jabalpur,Forest/Eco-sensitive,61.84,2,60.08,113.35,88.7,0,1,1,1,0,9.1,24.0,75,High
+PCL-MP-1343,Ujjain,Agricultural,63.96,8,79.8,84.27,5.6,0,0,0,0,1,26.3,13.1,41,Medium
+PCL-MP-1344,Dewas,Agricultural,57.22,4,33.5,61.92,84.8,0,0,0,0,1,27.9,13.8,43,Medium
+PCL-MP-1345,Sehore,Private Commercial,68.75,4,39.33,55.23,40.4,0,0,0,0,1,12.8,12.5,39,Medium
+PCL-MP-1346,Dewas,Agricultural,62.44,8,64.34,94.59,47.0,1,1,0,0,1,38.0,27.8,87,High
+PCL-MP-1347,Sehore,Agricultural,62.48,2,86.83,194.81,124.4,0,0,0,0,0,26.3,8.3,26,Low
+PCL-MP-1348,Ujjain,Private Commercial,77.08,3,71.19,170.72,139.8,1,0,0,0,1,34.9,20.2,63,Medium
+PCL-MP-1349,Raisen,Private Commercial,8.15,3,67.68,129.33,91.1,0,0,0,0,0,27.8,9.0,28,Low
+PCL-MP-1350,Indore,Forest/Eco-sensitive,12.36,2,40.23,93.56,132.6,0,0,0,1,0,22.0,12.2,38,Medium
+PCL-MP-1351,Raisen,Agricultural,22.84,4,28.64,35.79,25.0,0,0,0,0,1,20.7,9.6,30,Low
+PCL-MP-1352,Bhopal,Agricultural,55.3,2,84.82,144.7,70.6,0,0,0,0,1,24.7,9.6,30,Low
+PCL-MP-1353,Dewas,Private Commercial,76.4,1,68.92,103.08,49.6,0,0,0,0,1,39.1,9.3,29,Low
+PCL-MP-1354,Raisen,Forest/Eco-sensitive,75.47,1,67.66,77.91,15.1,2,0,1,1,1,16.6,26.9,84,High
+PCL-MP-1355,Indore,Agricultural,28.4,2,65.93,108.41,64.4,2,0,0,0,1,2.4,22.4,70,High
+PCL-MP-1356,Sehore,Private Commercial,11.88,1,100.72,117.13,16.3,1,0,0,0,0,18.5,9.0,28,Low
+PCL-MP-1357,Jabalpur,Forest/Eco-sensitive,69.9,1,43.41,79.42,83.0,0,0,1,1,1,6.9,20.2,63,Medium
+PCL-MP-1358,Sehore,Tribal Schedule V,15.87,13,68.42,81.64,19.3,0,0,1,0,1,17.3,22.4,70,High
+PCL-MP-1359,Sehore,Tribal Schedule V,43.12,9,95.25,174.12,82.8,1,0,0,0,1,34.0,27.2,85,High
+PCL-MP-1360,Bhopal,Private Commercial,11.51,1,101.24,209.93,107.4,0,0,0,0,0,17.0,9.3,29,Low
+PCL-MP-1361,Indore,Government Wasteland,41.24,4,54.79,115.97,111.7,0,0,0,0,1,19.4,14.7,46,Medium
+PCL-MP-1362,Dewas,Private Commercial,20.15,1,49.08,109.02,122.1,2,0,0,0,0,26.2,21.8,68,High
+PCL-MP-1363,Jabalpur,Agricultural,68.46,7,55.79,65.52,17.4,0,0,0,0,0,19.3,6.7,21,Low
+PCL-MP-1364,Dewas,Private Commercial,84.31,4,89.17,138.14,54.9,0,0,0,0,1,25.2,10.9,34,Low
+PCL-MP-1365,Dewas,Forest/Eco-sensitive,34.14,2,97.67,186.16,90.6,0,0,0,1,1,10.0,17.0,53,Medium
+PCL-MP-1366,Raisen,Forest/Eco-sensitive,68.17,1,38.66,90.8,134.9,2,1,0,1,1,3.4,32.0,100,High
+PCL-MP-1367,Bhopal,Forest/Eco-sensitive,79.14,4,77.19,131.64,70.5,0,0,0,1,0,29.0,12.2,38,Medium
+PCL-MP-1368,Raisen,Agricultural,72.37,5,41.55,86.7,108.7,1,0,0,0,1,16.5,20.5,64,Medium
+PCL-MP-1369,Bhopal,Government Wasteland,66.38,3,81.92,125.99,53.8,2,0,0,0,0,25.0,17.9,56,Medium
+PCL-MP-1370,Jabalpur,Tribal Schedule V,77.82,8,54.54,116.31,113.3,1,0,1,0,1,8.3,29.8,93,High
+PCL-MP-1371,Sehore,Agricultural,80.52,5,99.47,211.78,112.9,1,0,0,0,1,34.8,22.4,70,High
+PCL-MP-1372,Ujjain,Agricultural,66.04,8,101.2,222.63,120.0,1,0,0,0,0,10.3,21.8,68,High
+PCL-MP-1373,Raisen,Government Wasteland,44.14,1,84.57,112.64,33.2,0,0,0,0,0,15.7,0.0,0,Low
+PCL-MP-1374,Sehore,Government Wasteland,40.77,3,43.58,77.65,78.2,1,0,0,0,1,33.3,17.0,53,Medium
+PCL-MP-1375,Dewas,Agricultural,17.63,4,96.09,140.89,46.6,0,1,0,0,1,43.0,16.6,52,Medium
+PCL-MP-1376,Raisen,Private Commercial,65.08,1,97.08,144.48,48.8,0,0,0,0,0,26.1,4.5,14,Low
+PCL-MP-1377,Ujjain,Tribal Schedule V,24.18,6,88.76,100.83,13.6,0,0,0,0,1,16.0,9.6,30,Low
+PCL-MP-1378,Ujjain,Forest/Eco-sensitive,15.27,1,84.35,136.4,61.7,0,1,1,1,1,15.0,21.4,67,High
+PCL-MP-1379,Sehore,Agricultural,23.26,6,56.1,93.87,67.3,1,0,0,0,0,12.9,16.3,51,Medium
+PCL-MP-1380,Indore,Private Commercial,83.25,2,94.21,187.97,99.5,0,0,0,0,0,9.2,9.6,30,Low
+PCL-MP-1381,Raisen,Tribal Schedule V,15.42,10,36.43,81.79,124.5,1,0,1,0,1,38.7,31.7,99,High
+PCL-MP-1382,Bhopal,Agricultural,58.85,1,43.31,57.11,31.9,0,1,0,0,0,12.1,6.1,19,Low
+PCL-MP-1383,Ujjain,Agricultural,2.18,2,54.84,106.14,93.5,0,0,0,0,0,29.4,9.9,31,Low
+PCL-MP-1384,Sehore,Agricultural,66.44,6,52.63,88.95,69.0,0,0,0,0,1,27.8,10.2,32,Low
+PCL-MP-1385,Ujjain,Agricultural,68.75,6,60.85,111.83,83.8,1,1,0,0,1,14.4,29.1,91,High
+PCL-MP-1386,Jabalpur,Agricultural,23.1,7,48.06,76.66,59.5,0,0,0,0,1,43.5,13.8,43,Medium
+PCL-MP-1387,Bhopal,Agricultural,20.33,5,104.94,206.31,96.6,2,1,0,0,1,39.6,32.0,100,High
+PCL-MP-1388,Sehore,Agricultural,65.64,2,33.83,62.46,84.6,1,0,0,0,1,33.3,18.6,58,Medium
+PCL-MP-1389,Sehore,Tribal Schedule V,2.91,13,55.33,125.99,127.7,0,0,0,0,0,24.9,21.4,67,High
+PCL-MP-1390,Indore,Government Wasteland,59.45,2,75.22,121.25,61.2,0,0,0,0,1,29.0,6.1,19,Low
+PCL-MP-1391,Raisen,Private Commercial,68.5,4,51.17,79.2,54.8,2,0,0,0,0,6.6,21.4,67,High
+PCL-MP-1392,Dewas,Private Commercial,1.2,4,105.49,173.19,64.2,1,0,0,0,0,10.8,16.0,50,Medium
+PCL-MP-1393,Raisen,Tribal Schedule V,37.44,6,38.88,78.49,101.9,1,0,1,0,1,34.5,29.4,92,High
+PCL-MP-1394,Sehore,Tribal Schedule V,58.35,7,80.12,137.91,72.1,2,1,1,0,1,20.8,32.0,100,High
+PCL-MP-1395,Raisen,Agricultural,2.14,1,107.43,105.51,-1.8,0,0,0,0,0,6.1,0.6,2,Low
+PCL-MP-1396,Raisen,Forest/Eco-sensitive,20.17,2,26.25,33.2,26.5,0,0,1,1,1,31.5,16.6,52,Medium
+PCL-MP-1397,Ujjain,Government Wasteland,5.24,4,31.07,50.7,63.2,1,0,0,0,0,37.4,15.0,47,Medium
+PCL-MP-1398,Bhopal,Government Wasteland,60.89,4,90.55,144.18,59.2,0,1,0,0,1,34.8,12.2,38,Medium
+PCL-MP-1399,Raisen,Agricultural,81.72,6,38.48,77.19,100.6,0,0,0,0,1,21.9,16.0,50,Medium
+PCL-MP-1400,Dewas,Agricultural,75.5,4,107.73,139.2,29.2,0,1,0,0,0,26.5,9.6,30,Low
+PCL-MP-1401,Bhopal,Private Commercial,58.87,2,56.57,61.08,8.0,2,0,0,0,0,44.9,15.7,49,Medium
+PCL-MP-1402,Jabalpur,Agricultural,30.54,3,84.61,177.48,109.8,2,0,0,0,0,34.2,24.3,76,High
+PCL-MP-1403,Indore,Agricultural,32.42,3,46.31,46.65,0.7,0,0,0,0,1,22.3,4.2,13,Low
+PCL-MP-1404,Sehore,Agricultural,29.88,8,48.4,104.32,115.5,0,0,0,0,1,7.4,18.6,58,Medium
+PCL-MP-1405,Dewas,Private Commercial,66.07,4,87.36,194.83,123.0,0,0,0,0,1,14.8,15.0,47,Medium
+PCL-MP-1406,Bhopal,Forest/Eco-sensitive,46.04,4,41.14,79.84,94.1,0,1,1,1,1,14.8,30.1,94,High
+PCL-MP-1407,Bhopal,Tribal Schedule V,11.47,3,42.18,69.76,65.4,1,0,0,0,1,31.7,17.9,56,Medium
+PCL-MP-1408,Dewas,Agricultural,19.15,2,26.11,59.67,128.5,0,0,0,0,0,21.3,8.0,25,Low
+PCL-MP-1409,Jabalpur,Government Wasteland,35.65,3,92.51,95.7,3.4,0,0,0,0,0,37.6,1.3,4,Low
+PCL-MP-1410,Bhopal,Government Wasteland,81.67,1,33.6,43.18,28.5,0,0,0,0,1,25.9,7.0,22,Low
+PCL-MP-1411,Sehore,Agricultural,9.42,6,82.33,162.08,96.9,2,0,0,0,0,25.0,26.9,84,High
+PCL-MP-1412,Sehore,Agricultural,13.87,8,104.35,235.69,125.9,1,0,0,0,0,18.8,20.8,65,High
+PCL-MP-1413,Dewas,Private Commercial,48.09,2,56.88,99.42,74.8,0,0,0,0,1,43.2,7.0,22,Low
+PCL-MP-1414,Bhopal,Forest/Eco-sensitive,83.56,1,69.0,164.94,139.0,1,0,0,1,1,37.1,21.4,67,High
+PCL-MP-1415,Sehore,Private Commercial,48.72,2,33.01,53.39,61.7,1,0,0,0,1,11.9,15.0,47,Medium
+PCL-MP-1416,Dewas,Agricultural,34.28,4,87.41,174.75,99.9,0,1,0,0,0,31.2,13.4,42,Medium
+PCL-MP-1417,Sehore,Private Commercial,3.66,4,31.67,32.65,3.1,0,0,0,0,0,36.9,1.9,6,Low
+PCL-MP-1418,Raisen,Government Wasteland,10.69,2,88.55,193.19,118.2,0,0,0,0,0,28.6,10.2,32,Low
+PCL-MP-1419,Dewas,Private Commercial,13.14,2,38.02,73.26,92.7,0,0,0,0,0,34.0,9.3,29,Low
+PCL-MP-1420,Sehore,Private Commercial,19.27,3,91.84,106.96,16.5,0,0,0,0,0,24.9,2.2,7,Low
+PCL-MP-1421,Raisen,Forest/Eco-sensitive,11.52,2,65.88,81.51,23.7,0,0,1,1,0,44.9,14.4,45,Medium
+PCL-MP-1422,Sehore,Agricultural,6.55,7,52.49,120.2,129.0,1,0,0,0,0,16.0,20.8,65,High
+PCL-MP-1423,Bhopal,Forest/Eco-sensitive,14.8,3,77.38,184.61,138.6,2,1,0,1,0,9.4,32.0,100,High
+PCL-MP-1424,Dewas,Agricultural,62.06,2,34.55,35.55,2.9,0,0,0,0,0,37.0,3.2,10,Low
+PCL-MP-1425,Bhopal,Agricultural,40.32,6,42.77,74.0,73.0,1,0,0,0,1,33.0,20.5,64,Medium
+PCL-MP-1426,Indore,Forest/Eco-sensitive,56.97,4,74.56,142.57,91.2,2,0,0,1,1,2.9,32.0,100,High
+PCL-MP-1427,Raisen,Forest/Eco-sensitive,56.52,3,98.46,96.26,-2.2,0,0,1,1,1,44.0,15.0,47,Medium
+PCL-MP-1428,Bhopal,Tribal Schedule V,41.45,12,70.18,85.64,22.0,0,0,0,0,1,11.5,16.6,52,Medium
+PCL-MP-1429,Raisen,Forest/Eco-sensitive,2.05,3,55.21,76.65,38.8,0,0,1,1,0,3.3,13.8,43,Medium
+PCL-MP-1430,Dewas,Tribal Schedule V,75.74,3,105.25,244.83,132.6,1,0,1,0,0,23.7,21.4,67,High
+PCL-MP-1431,Jabalpur,Agricultural,20.81,3,61.25,85.93,40.3,0,0,0,0,1,29.5,7.7,24,Low
+PCL-MP-1432,Sehore,Private Commercial,68.11,2,51.26,101.11,97.2,0,1,0,0,0,43.9,15.4,48,Medium
+PCL-MP-1433,Indore,Agricultural,47.6,2,40.65,88.1,116.7,2,0,0,0,0,43.3,25.3,79,High
+PCL-MP-1434,Dewas,Agricultural,79.4,5,37.92,46.36,22.3,2,0,0,0,1,27.4,22.7,71,High
+PCL-MP-1435,Indore,Forest/Eco-sensitive,30.86,4,36.4,79.24,117.7,1,1,1,1,1,7.8,32.0,100,High
+PCL-MP-1436,Indore,Agricultural,65.1,1,103.66,241.3,132.8,1,0,0,0,1,8.4,19.2,60,Medium
+PCL-MP-1437,Sehore,Private Commercial,27.95,4,100.44,157.69,57.0,0,0,0,0,0,32.5,7.4,23,Low
+PCL-MP-1438,Raisen,Private Commercial,63.24,1,69.26,111.15,60.5,0,1,0,0,0,23.6,7.7,24,Low
+PCL-MP-1439,Sehore,Agricultural,65.16,1,41.14,65.3,58.7,0,0,0,0,1,7.9,9.0,28,Low
+PCL-MP-1440,Dewas,Private Commercial,5.11,2,64.4,121.51,88.7,1,1,0,0,0,26.6,21.8,68,High
+PCL-MP-1441,Raisen,Agricultural,38.6,3,63.56,143.02,125.0,0,0,0,0,1,14.9,12.2,38,Medium
+PCL-MP-1442,Jabalpur,Tribal Schedule V,67.8,14,87.33,94.51,8.2,0,0,1,0,0,32.8,22.1,69,High
+PCL-MP-1443,Indore,Agricultural,32.66,3,102.54,181.49,77.0,0,1,0,0,0,8.5,11.2,35,Low
+PCL-MP-1444,Jabalpur,Agricultural,26.53,8,49.55,60.06,21.2,0,0,0,0,1,34.6,14.7,46,Medium
+PCL-MP-1445,Raisen,Private Commercial,0.99,4,45.22,81.57,80.4,1,1,0,0,0,27.2,23.0,72,High
+PCL-MP-1446,Indore,Tribal Schedule V,24.0,13,72.39,155.39,114.7,2,0,1,0,0,30.2,32.0,100,High
+PCL-MP-1447,Bhopal,Agricultural,35.73,3,38.71,52.74,36.2,0,0,0,0,1,25.5,6.7,21,Low
+PCL-MP-1448,Raisen,Forest/Eco-sensitive,30.94,1,32.92,45.56,38.4,0,0,1,1,1,25.0,14.7,46,Medium
+PCL-MP-1449,Jabalpur,Tribal Schedule V,28.32,9,69.59,136.32,95.9,2,0,1,0,0,22.0,32.0,100,High
+PCL-MP-1450,Jabalpur,Private Commercial,67.1,3,61.3,133.59,117.9,1,0,0,0,0,27.8,15.0,47,Medium
+PCL-MP-1451,Raisen,Private Commercial,15.7,2,85.23,201.99,137.0,2,0,0,0,1,38.2,26.2,82,High
+PCL-MP-1452,Ujjain,Private Commercial,35.54,1,53.37,94.07,76.3,0,1,0,0,1,13.0,12.8,40,Medium
+PCL-MP-1453,Sehore,Private Commercial,65.31,1,83.3,120.37,44.5,0,0,0,0,1,8.3,6.7,21,Low
+PCL-MP-1454,Dewas,Tribal Schedule V,78.43,10,102.87,216.65,110.6,1,0,0,0,1,15.4,28.2,88,High
+PCL-MP-1455,Jabalpur,Agricultural,44.53,6,72.19,70.54,-2.3,0,0,0,0,0,35.9,4.2,13,Low
+PCL-MP-1456,Bhopal,Government Wasteland,24.2,1,53.83,80.43,49.4,0,0,0,0,1,8.8,9.3,29,Low
+PCL-MP-1457,Dewas,Forest/Eco-sensitive,27.08,1,48.08,51.73,7.6,0,0,0,1,1,23.9,8.6,27,Low
+PCL-MP-1458,Indore,Agricultural,66.83,4,102.64,163.55,59.3,1,0,0,0,1,41.6,17.9,56,Medium
+PCL-MP-1459,Ujjain,Agricultural,65.52,2,94.88,219.19,131.0,0,1,0,0,0,20.9,12.2,38,Medium
+PCL-MP-1460,Jabalpur,Tribal Schedule V,10.29,7,104.25,202.89,94.6,2,0,1,0,1,29.8,32.0,100,High
+PCL-MP-1461,Dewas,Private Commercial,18.23,2,41.37,55.9,35.1,0,0,0,0,1,7.1,8.0,25,Low
+PCL-MP-1462,Dewas,Agricultural,81.48,2,42.56,62.05,45.8,0,1,0,0,0,13.1,10.6,33,Low
+PCL-MP-1463,Sehore,Tribal Schedule V,46.18,3,36.06,58.87,63.3,0,1,1,0,1,8.5,21.1,66,High
+PCL-MP-1464,Sehore,Tribal Schedule V,53.69,14,84.45,155.7,84.4,1,0,0,0,1,43.8,32.0,100,High
+PCL-MP-1465,Indore,Agricultural,68.3,8,33.27,46.58,40.0,0,0,0,0,1,42.7,11.8,37,Low
+PCL-MP-1466,Indore,Tribal Schedule V,52.63,8,58.33,114.59,96.5,1,0,1,0,1,21.7,30.7,96,High
+PCL-MP-1467,Indore,Agricultural,29.96,3,68.18,104.88,53.8,0,1,0,0,1,3.7,16.0,50,Medium
+PCL-MP-1468,Dewas,Private Commercial,34.37,4,45.28,59.02,30.3,1,1,0,0,1,31.4,17.3,54,Medium
+PCL-MP-1469,Sehore,Forest/Eco-sensitive,46.51,2,39.71,76.28,92.1,0,0,0,1,1,27.0,17.3,54,Medium
+PCL-MP-1470,Dewas,Private Commercial,69.96,2,51.18,78.74,53.8,0,0,0,0,1,37.0,8.0,25,Low
+PCL-MP-1471,Bhopal,Agricultural,69.54,1,89.35,170.5,90.8,0,0,0,0,1,20.4,12.5,39,Medium
+PCL-MP-1472,Indore,Forest/Eco-sensitive,27.25,3,103.07,237.9,130.8,0,0,0,1,1,27.7,14.4,45,Medium
+PCL-MP-1473,Ujjain,Agricultural,31.7,1,25.07,44.17,76.2,0,1,0,0,1,1.9,12.2,38,Medium
+PCL-MP-1474,Raisen,Forest/Eco-sensitive,33.82,3,85.5,131.56,53.9,2,1,1,1,1,38.0,32.0,100,High
+PCL-MP-1475,Dewas,Government Wasteland,57.12,2,25.99,49.13,89.0,1,0,0,0,0,6.5,17.0,53,Medium
+PCL-MP-1476,Indore,Private Commercial,35.64,4,100.95,197.69,95.8,0,0,0,0,1,19.4,14.7,46,Medium
+PCL-MP-1477,Indore,Agricultural,51.59,8,96.98,125.42,29.3,0,0,0,0,1,16.8,12.2,38,Medium
+PCL-MP-1478,Bhopal,Private Commercial,60.06,1,74.32,174.24,134.4,1,0,0,0,0,33.9,14.4,45,Medium
+PCL-MP-1479,Sehore,Tribal Schedule V,7.97,10,78.61,150.34,91.2,1,0,1,0,1,40.7,32.0,100,High
+PCL-MP-1480,Sehore,Forest/Eco-sensitive,40.12,4,73.79,105.57,43.1,0,0,1,1,1,31.4,19.8,62,Medium
+PCL-MP-1481,Ujjain,Private Commercial,5.69,4,74.14,132.02,78.1,0,0,0,0,0,33.3,7.4,23,Low
+PCL-MP-1482,Bhopal,Agricultural,7.47,2,97.37,131.73,35.3,1,0,0,0,0,1.1,10.9,34,Low
+PCL-MP-1483,Sehore,Forest/Eco-sensitive,56.2,3,93.67,124.47,32.9,0,0,0,1,0,15.8,9.0,28,Low
+PCL-MP-1484,Bhopal,Government Wasteland,50.82,2,96.2,196.39,104.1,1,0,0,0,0,7.9,13.8,43,Medium
+PCL-MP-1485,Bhopal,Private Commercial,64.34,1,29.46,47.81,62.3,0,0,0,0,0,41.5,3.2,10,Low
+PCL-MP-1486,Indore,Agricultural,60.12,8,47.32,81.35,71.9,1,0,0,0,1,14.5,19.5,61,Medium
+PCL-MP-1487,Bhopal,Tribal Schedule V,54.36,9,76.89,145.74,89.5,1,0,1,0,1,21.0,32.0,100,High
+PCL-MP-1488,Jabalpur,Forest/Eco-sensitive,62.55,2,69.2,133.74,93.3,0,0,1,1,1,3.5,20.2,63,Medium
+PCL-MP-1489,Jabalpur,Agricultural,19.04,5,46.41,46.38,-0.1,0,1,0,0,1,40.3,13.4,42,Medium
+PCL-MP-1490,Indore,Government Wasteland,54.42,1,32.34,59.08,82.7,1,0,0,0,0,8.7,15.4,48,Medium
+PCL-MP-1491,Dewas,Private Commercial,79.61,4,103.43,139.71,35.1,0,0,0,0,0,14.9,6.1,19,Low
+PCL-MP-1492,Indore,Forest/Eco-sensitive,23.93,1,57.54,82.42,43.2,1,0,1,1,1,41.8,23.7,74,High
+PCL-MP-1493,Raisen,Agricultural,46.18,7,43.56,82.02,88.3,0,0,0,0,1,3.7,17.0,53,Medium
+PCL-MP-1494,Sehore,Forest/Eco-sensitive,66.18,1,101.2,117.98,16.6,0,0,0,1,1,31.7,8.3,26,Low
+PCL-MP-1495,Sehore,Forest/Eco-sensitive,65.65,4,62.06,134.91,117.4,0,0,1,1,1,43.0,23.0,72,High
+PCL-MP-1496,Ujjain,Forest/Eco-sensitive,10.74,3,53.34,74.09,38.9,1,0,1,1,0,38.5,19.8,62,Medium
+PCL-MP-1497,Ujjain,Forest/Eco-sensitive,55.24,2,72.13,169.71,135.3,0,0,1,1,1,31.2,23.7,74,High
+PCL-MP-1498,Raisen,Agricultural,53.97,4,36.9,45.39,23.0,0,0,0,0,1,3.3,7.7,24,Low
+PCL-MP-1499,Sehore,Government Wasteland,69.1,1,28.15,29.03,3.1,0,1,0,0,1,36.4,7.7,24,Low
+PCL-MP-1500,Jabalpur,Private Commercial,79.94,2,87.99,113.32,28.8,1,0,0,0,1,40.9,12.8,40,Medium
+PCL-MP-1501,Jabalpur,Agricultural,15.06,1,101.9,218.07,114.0,1,0,0,0,1,36.9,17.3,54,Medium
+PCL-MP-1502,Bhopal,Private Commercial,68.03,2,30.36,37.76,24.4,0,0,0,0,0,18.4,4.8,15,Low
+PCL-MP-1503,Sehore,Agricultural,71.18,4,89.96,162.83,81.0,2,1,0,0,1,31.5,32.0,100,High
+PCL-MP-1504,Sehore,Agricultural,21.09,1,36.34,76.21,109.7,0,0,0,0,1,39.6,10.9,34,Low
+PCL-MP-1505,Bhopal,Forest/Eco-sensitive,50.67,3,60.38,128.05,112.1,0,0,1,1,1,23.8,22.7,71,High
+PCL-MP-1506,Raisen,Agricultural,15.25,1,75.68,150.6,99.0,0,1,0,0,0,13.9,11.2,35,Low
+PCL-MP-1507,Indore,Agricultural,45.3,2,77.61,170.82,120.1,0,0,0,0,1,28.4,12.8,40,Medium
+PCL-MP-1508,Indore,Agricultural,16.87,3,83.25,196.01,135.4,2,0,0,0,1,29.2,26.9,84,High
+PCL-MP-1509,Dewas,Private Commercial,75.71,4,28.68,58.04,102.4,0,1,0,0,0,22.1,17.3,54,Medium
+PCL-MP-1510,Bhopal,Agricultural,20.38,8,75.38,107.24,42.3,1,0,0,0,0,15.0,21.1,66,High
+PCL-MP-1511,Ujjain,Agricultural,75.82,2,65.03,107.45,65.2,0,1,0,0,0,20.7,11.5,36,Low
+PCL-MP-1512,Raisen,Agricultural,39.18,4,78.72,186.14,136.5,2,0,0,0,1,6.6,29.1,91,High
+PCL-MP-1513,Indore,Forest/Eco-sensitive,19.08,3,76.31,159.86,109.5,0,0,1,1,0,38.5,18.2,57,Medium
+PCL-MP-1514,Bhopal,Agricultural,44.59,4,75.28,162.88,116.4,1,0,0,0,1,15.1,18.9,59,Medium
+PCL-MP-1515,Sehore,Government Wasteland,77.71,1,60.51,61.36,1.4,0,0,0,0,1,19.4,1.9,6,Low
+PCL-MP-1516,Raisen,Private Commercial,67.93,1,63.46,82.42,29.9,0,1,0,0,0,42.8,7.7,24,Low
+PCL-MP-1517,Jabalpur,Government Wasteland,1.85,3,38.75,62.62,61.6,0,0,0,0,0,44.0,7.4,23,Low
+PCL-MP-1518,Raisen,Forest/Eco-sensitive,74.37,4,40.72,90.14,121.4,0,0,1,1,1,17.6,23.4,73,High
+PCL-MP-1519,Dewas,Agricultural,23.3,4,91.95,98.15,6.7,0,0,0,0,1,42.6,5.1,16,Low
+PCL-MP-1520,Jabalpur,Agricultural,4.86,7,56.08,103.62,84.8,2,0,0,0,0,3.5,28.2,88,High
+PCL-MP-1521,Dewas,Agricultural,10.1,8,87.68,178.94,104.1,0,0,0,0,0,34.0,14.7,46,Medium
+PCL-MP-1522,Ujjain,Agricultural,30.3,5,67.8,105.99,56.3,1,0,0,0,1,37.4,17.6,55,Medium
+PCL-MP-1523,Ujjain,Private Commercial,25.2,3,92.99,215.81,132.1,0,0,0,0,1,40.2,13.4,42,Medium
+PCL-MP-1524,Raisen,Agricultural,33.51,3,49.51,115.71,133.7,1,0,0,0,1,39.4,18.2,57,Medium
+PCL-MP-1525,Dewas,Agricultural,58.16,3,65.28,101.78,55.9,0,1,0,0,1,1.5,14.4,45,Medium
+PCL-MP-1526,Ujjain,Agricultural,80.56,6,59.99,86.81,44.7,0,0,0,0,1,31.5,14.1,44,Medium
+PCL-MP-1527,Dewas,Private Commercial,76.4,3,39.6,52.55,32.7,0,0,0,0,0,2.6,3.2,10,Low
+PCL-MP-1528,Dewas,Agricultural,81.3,3,85.5,116.59,36.4,0,0,0,0,1,30.2,8.3,26,Low
+PCL-MP-1529,Bhopal,Government Wasteland,49.05,4,47.13,57.38,21.7,0,1,0,0,1,15.8,14.4,45,Medium
+PCL-MP-1530,Dewas,Agricultural,82.93,5,35.33,34.84,-1.4,0,0,0,0,0,41.8,6.4,20,Low
+PCL-MP-1531,Sehore,Government Wasteland,28.49,3,65.28,89.45,37.0,0,0,0,0,1,7.0,10.6,33,Low
+PCL-MP-1532,Sehore,Forest/Eco-sensitive,78.43,3,83.58,168.07,101.1,0,1,1,1,1,18.4,28.2,88,High
+PCL-MP-1533,Bhopal,Agricultural,51.89,4,74.59,94.89,27.2,0,0,0,0,1,24.5,7.7,24,Low
+PCL-MP-1534,Raisen,Forest/Eco-sensitive,81.42,4,41.53,58.59,41.1,0,0,0,1,1,7.1,15.7,49,Medium
+PCL-MP-1535,Dewas,Agricultural,29.65,5,108.09,239.72,121.8,1,0,0,0,0,36.3,18.2,57,Medium
+PCL-MP-1536,Dewas,Agricultural,62.02,7,86.93,134.79,55.1,0,0,0,0,1,14.0,16.0,50,Medium
+PCL-MP-1537,Dewas,Agricultural,81.63,7,32.52,50.2,54.4,0,0,0,0,1,32.1,14.4,45,Medium
+PCL-MP-1538,Ujjain,Tribal Schedule V,17.34,9,49.6,82.4,66.1,0,0,1,0,1,33.4,22.7,71,High
+PCL-MP-1539,Indore,Agricultural,81.28,8,35.56,68.12,91.6,2,0,0,0,1,1.8,32.0,100,High
+PCL-MP-1540,Ujjain,Agricultural,84.52,2,75.91,111.93,47.5,0,0,0,0,1,31.0,11.2,35,Low
+PCL-MP-1541,Dewas,Private Commercial,49.11,3,38.84,40.19,3.5,0,0,0,0,1,7.8,5.1,16,Low
+PCL-MP-1542,Dewas,Agricultural,54.26,6,29.14,40.01,37.3,0,1,0,0,1,28.4,16.0,50,Medium
+PCL-MP-1543,Indore,Private Commercial,74.22,3,48.07,94.32,96.2,1,0,0,0,1,6.6,18.6,58,Medium
+PCL-MP-1544,Dewas,Agricultural,41.47,6,103.28,122.53,18.6,1,0,0,0,0,25.4,11.5,36,Low
+PCL-MP-1545,Ujjain,Private Commercial,47.07,1,60.47,137.77,127.8,2,1,0,0,1,31.3,26.9,84,High
+PCL-MP-1546,Indore,Tribal Schedule V,75.68,12,69.47,163.72,135.7,1,0,1,0,1,31.4,32.0,100,High
+PCL-MP-1547,Indore,Agricultural,7.14,2,31.61,65.54,107.3,0,1,0,0,0,5.3,12.5,39,Medium
+PCL-MP-1548,Ujjain,Forest/Eco-sensitive,50.62,4,35.11,46.24,31.7,1,0,0,1,0,9.6,17.3,54,Medium
+PCL-MP-1549,Dewas,Agricultural,12.8,5,105.65,153.65,45.4,1,0,0,0,0,11.3,15.7,49,Medium
+PCL-MP-1550,Sehore,Agricultural,69.76,1,69.95,139.06,98.8,0,1,0,0,0,0.7,12.2,38,Medium
+PCL-MP-1551,Sehore,Tribal Schedule V,40.61,14,75.1,119.22,58.7,0,1,1,0,1,10.0,30.1,94,High
+PCL-MP-1552,Indore,Agricultural,64.84,6,35.51,39.41,11.0,1,0,0,0,1,2.3,15.7,49,Medium
+PCL-MP-1553,Dewas,Private Commercial,62.71,4,44.2,68.09,54.0,0,0,0,0,0,40.3,8.3,26,Low
+PCL-MP-1554,Ujjain,Private Commercial,57.89,2,26.09,50.29,92.8,0,0,0,0,1,30.6,12.8,40,Medium
+PCL-MP-1555,Jabalpur,Private Commercial,9.1,2,30.5,72.1,136.4,1,0,0,0,0,6.0,16.6,52,Medium
+PCL-MP-1556,Ujjain,Agricultural,42.67,5,89.29,188.53,111.1,0,0,0,0,1,42.8,17.0,53,Medium
+PCL-MP-1557,Indore,Forest/Eco-sensitive,9.63,3,66.59,85.55,28.5,0,1,0,1,0,37.4,13.1,41,Medium
+PCL-MP-1558,Raisen,Forest/Eco-sensitive,82.64,4,76.39,108.79,42.4,1,0,0,1,1,22.4,20.8,65,High
+PCL-MP-1559,Raisen,Private Commercial,22.61,3,93.81,162.64,73.4,1,0,0,0,0,5.8,14.1,44,Medium
+PCL-MP-1560,Raisen,Agricultural,32.3,8,28.06,33.85,20.6,0,0,0,0,0,7.8,9.0,28,Low
+PCL-MP-1561,Raisen,Private Commercial,9.74,4,81.11,157.66,94.4,1,0,0,0,0,23.0,18.6,58,Medium
+PCL-MP-1562,Raisen,Agricultural,50.44,7,77.44,113.18,46.2,0,0,0,0,1,2.5,15.0,47,Medium
+PCL-MP-1563,Jabalpur,Private Commercial,65.16,3,57.35,90.09,57.1,0,0,0,0,1,11.4,9.0,28,Low
+PCL-MP-1564,Indore,Private Commercial,50.57,1,98.86,110.33,11.6,1,1,0,0,1,19.3,13.8,43,Medium
+PCL-MP-1565,Bhopal,Forest/Eco-sensitive,50.19,3,57.11,86.58,51.6,0,0,1,1,1,15.5,19.5,61,Medium
+PCL-MP-1566,Sehore,Tribal Schedule V,56.89,5,77.26,114.1,47.7,0,0,0,0,0,37.9,8.0,25,Low
+PCL-MP-1567,Bhopal,Agricultural,48.96,4,78.09,182.65,133.9,0,0,0,0,1,12.7,14.1,44,Medium
+PCL-MP-1568,Sehore,Tribal Schedule V,40.66,6,54.52,57.85,6.1,0,0,1,0,1,14.4,13.8,43,Medium
+PCL-MP-1569,Sehore,Private Commercial,65.01,2,99.88,185.81,86.0,0,1,0,0,1,29.9,17.3,54,Medium
+PCL-MP-1570,Ujjain,Forest/Eco-sensitive,39.99,4,104.44,209.26,100.4,2,0,1,1,0,34.6,32.0,100,High
+PCL-MP-1571,Ujjain,Tribal Schedule V,5.94,6,96.91,129.57,33.7,2,0,1,0,1,7.2,29.8,93,High
+PCL-MP-1572,Bhopal,Agricultural,70.4,8,66.26,158.19,138.7,1,0,0,0,1,1.8,25.9,81,High
+PCL-MP-1573,Sehore,Agricultural,72.54,8,91.49,94.26,3.0,0,0,0,0,1,3.3,9.9,31,Low
+PCL-MP-1574,Raisen,Tribal Schedule V,57.26,4,58.74,127.33,116.8,0,0,1,0,1,5.9,19.2,60,Medium
+PCL-MP-1575,Ujjain,Government Wasteland,21.78,1,45.24,51.0,12.7,0,0,0,0,1,17.9,1.6,5,Low
+PCL-MP-1576,Jabalpur,Forest/Eco-sensitive,79.55,2,37.26,44.86,20.4,0,0,1,1,1,22.3,14.1,44,Medium
+PCL-MP-1577,Dewas,Private Commercial,40.63,2,106.88,237.83,122.5,0,0,0,0,0,37.1,10.9,34,Low
+PCL-MP-1578,Bhopal,Private Commercial,76.99,1,96.53,184.39,91.0,0,0,0,0,0,11.2,6.7,21,Low
+PCL-MP-1579,Jabalpur,Agricultural,69.14,2,70.47,91.1,29.3,0,1,0,0,0,41.8,7.7,24,Low
+PCL-MP-1580,Dewas,Agricultural,79.62,4,50.28,110.42,119.6,1,0,0,0,0,29.2,18.2,57,Medium
+PCL-MP-1581,Bhopal,Tribal Schedule V,79.97,10,87.64,201.0,129.3,1,0,1,0,1,12.1,32.0,100,High
+PCL-MP-1582,Bhopal,Agricultural,51.38,6,63.53,62.87,-1.0,1,0,0,0,0,6.6,11.2,35,Low
+PCL-MP-1583,Dewas,Private Commercial,9.86,2,68.89,162.31,135.6,0,0,0,0,0,38.2,9.9,31,Low
+PCL-MP-1584,Jabalpur,Agricultural,79.88,8,65.66,132.37,101.6,1,0,0,0,0,9.3,21.8,68,High
+PCL-MP-1585,Raisen,Government Wasteland,75.23,2,26.76,26.31,-1.7,0,0,0,0,1,4.5,4.8,15,Low
+PCL-MP-1586,Raisen,Agricultural,59.76,3,29.23,53.96,84.6,0,1,0,0,0,8.1,14.4,45,Medium
+PCL-MP-1587,Sehore,Agricultural,78.24,8,95.32,158.85,66.6,2,0,0,0,0,12.3,26.2,82,High
+PCL-MP-1588,Jabalpur,Private Commercial,11.5,2,76.01,181.9,139.3,1,0,0,0,0,18.7,16.6,52,Medium
+PCL-MP-1589,Dewas,Agricultural,38.61,4,56.42,109.58,94.2,2,1,0,0,1,31.3,32.0,100,High
+PCL-MP-1590,Jabalpur,Agricultural,32.91,7,87.57,115.73,32.2,2,0,0,0,1,40.9,29.1,91,High
+PCL-MP-1591,Ujjain,Private Commercial,63.73,1,25.46,42.81,68.1,1,0,0,0,1,40.2,14.7,46,Medium
+PCL-MP-1592,Bhopal,Private Commercial,22.49,4,104.08,231.36,122.3,1,0,0,0,1,5.7,22.1,69,High
+PCL-MP-1593,Ujjain,Government Wasteland,24.24,3,103.73,141.1,36.0,0,0,0,0,0,12.2,4.8,15,Low
+PCL-MP-1594,Dewas,Agricultural,14.44,8,89.91,105.13,16.9,0,0,0,0,0,36.0,8.6,27,Low
+PCL-MP-1595,Indore,Agricultural,40.24,3,85.01,134.56,58.3,0,0,0,0,1,16.4,10.2,32,Low
+PCL-MP-1596,Jabalpur,Private Commercial,39.18,1,96.9,213.86,120.7,2,0,0,0,1,8.0,24.0,75,High
+PCL-MP-1597,Jabalpur,Private Commercial,49.81,1,69.71,123.92,77.8,2,0,0,0,1,40.0,21.8,68,High
+PCL-MP-1598,Bhopal,Agricultural,83.42,2,58.5,105.65,80.6,0,0,0,0,1,4.1,12.8,40,Medium
+PCL-MP-1599,Raisen,Private Commercial,23.26,1,53.0,53.72,1.4,0,0,0,0,0,45.0,0.0,0,Low
+PCL-MP-1600,Ujjain,Private Commercial,18.36,1,93.13,126.68,36.0,0,0,0,0,1,27.3,6.4,20,Low
+PCL-MP-1601,Indore,Government Wasteland,73.64,1,26.74,33.48,25.2,0,0,0,0,1,43.0,6.1,19,Low
+PCL-MP-1602,Indore,Agricultural,41.98,7,87.55,200.18,128.6,0,0,0,0,1,4.8,17.0,53,Medium
+PCL-MP-1603,Raisen,Tribal Schedule V,40.76,12,76.03,82.17,8.1,1,1,1,0,1,23.3,32.0,100,High
+PCL-MP-1604,Raisen,Forest/Eco-sensitive,55.22,2,104.11,178.5,71.5,0,1,1,1,1,36.2,22.1,69,High
+PCL-MP-1605,Jabalpur,Tribal Schedule V,71.61,11,61.36,108.88,77.4,1,0,1,0,1,21.2,32.0,100,High
+PCL-MP-1606,Jabalpur,Private Commercial,21.91,3,74.77,154.37,106.5,1,0,0,0,0,38.0,18.2,57,Medium
+PCL-MP-1607,Jabalpur,Agricultural,50.12,8,89.38,143.22,60.2,0,0,0,0,0,36.5,12.8,40,Medium
+PCL-MP-1608,Indore,Agricultural,63.62,5,99.09,109.41,10.4,0,1,0,0,1,8.1,10.6,33,Low
+PCL-MP-1609,Ujjain,Forest/Eco-sensitive,63.39,4,50.74,108.03,112.9,0,0,0,1,1,36.3,18.2,57,Medium
+PCL-MP-1610,Bhopal,Agricultural,1.67,2,94.36,184.87,95.9,2,0,0,0,0,7.0,23.0,72,High
+PCL-MP-1611,Ujjain,Forest/Eco-sensitive,16.63,3,90.43,105.34,16.5,0,1,0,1,0,20.3,13.4,42,Medium
+PCL-MP-1612,Raisen,Private Commercial,73.15,2,42.11,74.77,77.6,0,1,0,0,1,28.6,12.8,40,Medium
+PCL-MP-1613,Ujjain,Private Commercial,49.4,3,28.15,43.06,53.0,1,0,0,0,0,39.1,10.2,32,Low
+PCL-MP-1614,Indore,Forest/Eco-sensitive,45.14,4,73.99,129.65,75.2,1,0,1,1,1,29.3,26.2,82,High
+PCL-MP-1615,Indore,Agricultural,16.74,6,62.24,104.94,68.6,1,0,0,0,0,32.3,17.6,55,Medium
+PCL-MP-1616,Raisen,Agricultural,25.29,7,106.58,230.0,115.8,1,0,0,0,0,38.1,20.8,65,High
+PCL-MP-1617,Jabalpur,Agricultural,41.3,3,41.96,76.72,82.8,1,0,0,0,1,9.8,19.5,61,Medium
+PCL-MP-1618,Bhopal,Government Wasteland,30.82,3,55.35,65.31,18.0,0,0,0,0,1,3.3,3.8,12,Low
+PCL-MP-1619,Bhopal,Private Commercial,41.6,3,91.72,189.46,106.6,0,0,0,0,0,38.5,10.6,33,Low
+PCL-MP-1620,Ujjain,Private Commercial,57.07,1,103.76,164.44,58.5,0,0,0,0,1,5.2,6.1,19,Low
+PCL-MP-1621,Bhopal,Tribal Schedule V,4.05,4,39.2,43.95,12.1,1,0,0,0,0,22.7,9.0,28,Low
+PCL-MP-1622,Ujjain,Agricultural,55.18,6,94.63,106.77,12.8,1,0,0,0,1,37.6,14.7,46,Medium
+PCL-MP-1623,Indore,Agricultural,31.97,7,55.65,106.53,91.4,1,0,0,0,1,36.2,25.0,78,High
+PCL-MP-1624,Raisen,Tribal Schedule V,76.39,11,92.54,136.46,47.5,2,1,0,0,0,4.3,32.0,100,High
+PCL-MP-1625,Indore,Agricultural,33.73,1,81.11,152.5,88.0,0,1,0,0,1,32.2,18.9,59,Medium
+PCL-MP-1626,Jabalpur,Tribal Schedule V,82.69,9,59.17,114.63,93.7,1,0,0,0,1,13.0,24.0,75,High
+PCL-MP-1627,Jabalpur,Agricultural,54.91,8,84.29,188.57,123.7,0,0,0,0,1,13.9,18.2,57,Medium
+PCL-MP-1628,Bhopal,Private Commercial,33.45,2,69.24,120.07,73.4,1,0,0,0,1,28.8,18.6,58,Medium
+PCL-MP-1629,Sehore,Private Commercial,20.89,3,86.75,206.56,138.1,2,0,0,0,1,16.3,27.5,86,High
+PCL-MP-1630,Bhopal,Forest/Eco-sensitive,80.04,4,50.33,101.59,101.8,1,0,0,1,1,40.3,24.0,75,High
+PCL-MP-1631,Sehore,Agricultural,25.78,3,85.72,146.03,70.4,1,0,0,0,0,16.6,12.5,39,Medium
+PCL-MP-1632,Bhopal,Agricultural,36.47,7,31.97,33.25,4.0,0,0,0,0,1,16.9,8.3,26,Low
+PCL-MP-1633,Sehore,Forest/Eco-sensitive,74.19,4,79.1,189.44,139.5,0,0,0,1,1,7.7,17.9,56,Medium
+PCL-MP-1634,Sehore,Agricultural,60.59,3,107.28,181.75,69.4,1,0,0,0,1,7.5,14.4,45,Medium
+PCL-MP-1635,Bhopal,Private Commercial,35.03,1,56.41,77.28,37.0,0,1,0,0,1,17.2,9.3,29,Low
+PCL-MP-1636,Dewas,Private Commercial,67.36,2,91.62,143.07,56.2,0,0,0,0,1,8.6,8.6,27,Low
+PCL-MP-1637,Sehore,Agricultural,74.05,7,65.9,92.2,39.9,0,0,0,0,1,37.6,12.2,38,Medium
+PCL-MP-1638,Ujjain,Private Commercial,64.88,4,89.74,172.07,91.7,1,1,0,0,1,28.2,24.0,75,High
+PCL-MP-1639,Dewas,Private Commercial,81.46,4,87.55,165.17,88.7,0,0,0,0,1,35.9,16.0,50,Medium
+PCL-MP-1640,Jabalpur,Agricultural,55.02,2,41.36,76.4,84.7,0,1,0,0,1,8.9,14.1,44,Medium
+PCL-MP-1641,Bhopal,Forest/Eco-sensitive,45.44,1,48.37,60.39,24.9,0,0,1,1,1,24.2,15.4,48,Medium
+PCL-MP-1642,Dewas,Agricultural,4.3,1,53.9,65.31,21.2,1,0,0,0,0,4.6,10.9,34,Low
+PCL-MP-1643,Dewas,Agricultural,22.09,2,38.11,88.82,133.1,0,1,0,0,0,8.6,13.4,42,Medium
+PCL-MP-1644,Jabalpur,Agricultural,33.45,6,37.11,83.31,124.5,1,0,0,0,1,11.2,22.7,71,High
+PCL-MP-1645,Sehore,Forest/Eco-sensitive,33.04,1,47.89,67.6,41.2,0,1,1,1,1,41.2,21.4,67,High
+PCL-MP-1646,Bhopal,Agricultural,81.91,2,45.94,80.59,75.4,0,0,0,0,1,4.2,8.3,26,Low
+PCL-MP-1647,Indore,Agricultural,83.76,4,70.69,110.59,56.4,0,0,0,0,1,21.2,10.2,32,Low
+PCL-MP-1648,Ujjain,Private Commercial,55.68,2,25.05,57.7,130.3,1,0,0,0,1,16.1,17.9,56,Medium
+PCL-MP-1649,Sehore,Agricultural,14.14,2,50.55,77.0,52.3,2,0,0,0,0,12.9,18.6,58,Medium
+PCL-MP-1650,Raisen,Agricultural,43.16,6,100.13,232.39,132.1,1,0,0,0,1,30.0,23.0,72,High
+PCL-MP-1651,Sehore,Agricultural,77.73,3,79.95,76.19,-4.7,0,0,0,0,1,18.9,6.1,19,Low
+PCL-MP-1652,Jabalpur,Forest/Eco-sensitive,64.93,1,91.92,173.84,89.1,2,0,0,1,1,16.2,29.8,93,High
+PCL-MP-1653,Dewas,Agricultural,71.41,1,35.6,52.94,48.7,2,0,0,0,0,30.8,16.3,51,Medium
+PCL-MP-1654,Jabalpur,Agricultural,8.1,5,93.72,119.09,27.1,0,0,0,0,0,2.1,4.8,15,Low
+PCL-MP-1655,Sehore,Agricultural,17.07,7,34.43,46.55,35.2,0,1,0,0,1,33.4,17.0,53,Medium
+PCL-MP-1656,Jabalpur,Forest/Eco-sensitive,48.25,1,74.99,152.35,103.2,1,0,0,1,0,12.7,18.6,58,Medium
+PCL-MP-1657,Jabalpur,Forest/Eco-sensitive,52.42,4,25.17,39.5,56.9,0,0,0,1,1,38.1,14.7,46,Medium
+PCL-MP-1658,Raisen,Agricultural,57.97,8,67.12,114.11,70.0,1,1,0,0,0,24.2,23.7,74,High
+PCL-MP-1659,Dewas,Agricultural,48.82,1,109.17,139.43,27.7,0,0,0,0,0,9.3,3.5,11,Low
+PCL-MP-1660,Dewas,Agricultural,53.4,2,27.37,43.14,57.6,1,0,0,0,0,11.5,9.6,30,Low
+PCL-MP-1661,Ujjain,Agricultural,28.69,4,105.2,218.27,107.5,0,0,0,0,1,26.3,14.7,46,Medium
+PCL-MP-1662,Bhopal,Government Wasteland,77.96,4,51.63,112.51,117.9,2,0,0,0,1,13.9,27.8,87,High
+PCL-MP-1663,Jabalpur,Agricultural,4.91,7,59.14,109.12,84.5,1,0,0,0,0,28.3,21.1,66,High
+PCL-MP-1664,Raisen,Agricultural,67.69,2,53.87,124.41,130.9,0,0,0,0,1,9.1,13.4,42,Medium
+PCL-MP-1665,Bhopal,Private Commercial,71.55,2,79.18,104.65,32.2,0,0,0,0,1,11.3,7.7,24,Low
+PCL-MP-1666,Ujjain,Agricultural,11.29,7,68.62,130.03,89.5,1,0,0,0,0,7.0,19.8,62,Medium
+PCL-MP-1667,Dewas,Agricultural,1.18,3,29.87,50.34,68.5,0,0,0,0,0,19.3,7.0,22,Low
+PCL-MP-1668,Indore,Government Wasteland,54.63,2,91.75,132.6,44.5,0,0,0,0,0,27.2,4.8,15,Low
+PCL-MP-1669,Dewas,Private Commercial,35.88,2,33.91,75.29,122.0,0,0,0,0,0,28.9,10.2,32,Low
+PCL-MP-1670,Jabalpur,Agricultural,53.22,4,65.86,135.94,106.4,0,0,0,0,1,18.3,14.4,45,Medium
+PCL-MP-1671,Bhopal,Agricultural,3.04,2,37.1,58.94,58.9,0,0,0,0,0,16.5,5.4,17,Low
+PCL-MP-1672,Bhopal,Agricultural,24.51,4,100.26,199.75,99.2,1,1,0,0,1,38.0,26.2,82,High
+PCL-MP-1673,Jabalpur,Agricultural,55.84,2,53.76,67.46,25.5,0,0,0,0,1,8.1,6.4,20,Low
+PCL-MP-1674,Sehore,Government Wasteland,84.81,4,99.66,104.12,4.5,1,0,0,0,1,17.3,12.5,39,Medium
+PCL-MP-1675,Jabalpur,Agricultural,4.4,4,97.63,134.39,37.7,2,0,0,0,0,13.0,20.8,65,High
+PCL-MP-1676,Indore,Tribal Schedule V,82.33,10,42.79,45.7,6.8,0,0,1,0,1,33.9,18.2,57,Medium
+PCL-MP-1677,Raisen,Private Commercial,15.63,3,69.67,115.01,65.1,0,0,0,0,1,28.9,8.6,27,Low
+PCL-MP-1678,Ujjain,Private Commercial,3.59,2,101.07,162.27,60.6,2,0,0,0,0,17.3,21.1,66,High
+PCL-MP-1679,Dewas,Private Commercial,11.85,1,50.08,85.25,70.2,2,0,0,0,0,15.5,20.5,64,Medium
+PCL-MP-1680,Raisen,Private Commercial,35.06,4,51.95,78.16,50.5,2,0,0,0,1,4.2,25.9,81,High
+PCL-MP-1681,Jabalpur,Agricultural,23.86,4,33.36,35.14,5.3,2,1,0,0,1,14.0,24.0,75,High
+PCL-MP-1682,Ujjain,Forest/Eco-sensitive,71.94,2,84.98,203.71,139.7,0,0,0,1,0,0.9,11.8,37,Low
+PCL-MP-1683,Ujjain,Government Wasteland,80.42,1,65.12,110.27,69.3,0,0,0,0,1,10.6,9.9,31,Low
+PCL-MP-1684,Jabalpur,Agricultural,20.25,8,86.41,139.9,61.9,0,0,0,0,1,34.8,15.4,48,Medium
+PCL-MP-1685,Raisen,Tribal Schedule V,3.04,5,74.09,84.17,13.6,0,1,0,0,0,15.6,8.3,26,Low
+PCL-MP-1686,Raisen,Agricultural,64.1,5,52.72,51.86,-1.6,0,0,0,0,1,42.9,6.7,21,Low
+PCL-MP-1687,Sehore,Tribal Schedule V,48.99,9,108.31,134.96,24.6,1,1,1,0,1,20.6,32.0,100,High
+PCL-MP-1688,Dewas,Agricultural,9.31,3,27.73,54.05,94.9,2,1,0,0,0,43.4,28.5,89,High
+PCL-MP-1689,Jabalpur,Private Commercial,38.92,3,69.08,82.84,19.9,0,0,0,0,1,5.4,6.4,20,Low
+PCL-MP-1690,Sehore,Agricultural,63.3,7,106.18,234.15,120.5,2,0,0,0,0,21.6,25.9,81,High
+PCL-MP-1691,Sehore,Agricultural,61.07,8,48.41,46.51,-3.9,2,0,0,0,0,23.9,20.2,63,Medium
+PCL-MP-1692,Sehore,Tribal Schedule V,39.39,12,28.32,30.65,8.2,0,0,1,0,0,35.8,16.3,51,Medium
+PCL-MP-1693,Ujjain,Agricultural,21.55,7,63.92,145.14,127.1,1,0,0,0,0,11.2,23.0,72,High
+PCL-MP-1694,Ujjain,Agricultural,75.08,5,81.67,85.49,4.7,0,0,0,0,0,18.8,4.5,14,Low
+PCL-MP-1695,Dewas,Agricultural,9.39,6,59.86,71.17,18.9,2,1,0,0,0,28.9,23.7,74,High
+PCL-MP-1696,Jabalpur,Forest/Eco-sensitive,32.71,4,97.74,149.07,52.5,2,0,1,1,0,22.1,32.0,100,High
+PCL-MP-1697,Indore,Forest/Eco-sensitive,37.49,4,94.74,205.61,117.0,2,1,1,1,1,17.9,32.0,100,High
+PCL-MP-1698,Bhopal,Forest/Eco-sensitive,1.45,3,38.05,55.9,46.9,2,0,1,1,0,31.5,31.7,99,High
+PCL-MP-1699,Jabalpur,Forest/Eco-sensitive,56.27,1,58.2,81.31,39.7,2,0,0,1,0,17.2,18.2,57,Medium
+PCL-MP-1700,Indore,Agricultural,1.86,1,109.09,156.96,43.9,1,0,0,0,0,39.8,12.2,38,Medium
+PCL-MP-1701,Indore,Forest/Eco-sensitive,4.22,1,94.33,133.75,41.8,0,0,0,1,0,18.1,6.1,19,Low
+PCL-MP-1702,Raisen,Agricultural,18.56,6,52.49,51.01,-2.8,0,1,0,0,1,10.3,13.1,41,Medium
+PCL-MP-1703,Sehore,Agricultural,6.19,4,59.94,123.65,106.3,1,0,0,0,0,35.7,17.3,54,Medium
+PCL-MP-1704,Ujjain,Private Commercial,21.79,1,75.99,180.33,137.3,0,0,0,0,0,31.4,6.7,21,Low
+PCL-MP-1705,Jabalpur,Agricultural,72.46,8,30.74,29.99,-2.4,0,0,0,0,1,33.5,12.5,39,Medium
+PCL-MP-1706,Sehore,Private Commercial,84.02,2,26.8,54.95,105.0,2,0,0,0,1,4.0,27.2,85,High
+PCL-MP-1707,Indore,Agricultural,17.77,1,45.24,90.56,100.2,0,0,0,0,0,6.5,9.0,28,Low
+PCL-MP-1708,Dewas,Private Commercial,64.76,4,80.08,109.57,36.8,1,0,0,0,1,24.5,17.3,54,Medium
+PCL-MP-1709,Indore,Tribal Schedule V,59.34,6,76.69,115.28,50.3,1,1,0,0,1,9.1,24.0,75,High
+PCL-MP-1710,Jabalpur,Government Wasteland,79.78,2,32.8,59.35,80.9,0,0,0,0,1,4.0,11.8,37,Low
+PCL-MP-1711,Jabalpur,Agricultural,36.33,4,50.76,90.65,78.6,0,0,0,0,0,21.9,6.7,21,Low
+PCL-MP-1712,Dewas,Agricultural,14.68,8,60.93,111.72,83.4,2,0,0,0,0,21.9,29.8,93,High
+PCL-MP-1713,Bhopal,Forest/Eco-sensitive,78.37,2,71.99,86.73,20.5,0,0,1,1,1,21.9,14.7,46,Medium
+PCL-MP-1714,Dewas,Agricultural,40.15,3,102.87,98.35,-4.4,0,0,0,0,1,18.5,4.5,14,Low
+PCL-MP-1715,Jabalpur,Agricultural,41.87,2,59.75,60.13,0.6,0,0,0,0,1,9.1,5.1,16,Low
+PCL-MP-1716,Raisen,Government Wasteland,65.67,3,68.32,113.31,65.9,0,0,0,0,1,41.7,9.9,31,Low
+PCL-MP-1717,Bhopal,Government Wasteland,31.04,1,84.29,158.95,88.6,1,0,0,0,1,27.3,17.0,53,Medium
+PCL-MP-1718,Jabalpur,Tribal Schedule V,1.54,4,79.77,181.83,127.9,1,0,1,0,1,19.3,27.5,86,High
+PCL-MP-1719,Dewas,Private Commercial,45.56,4,74.82,150.7,101.4,0,0,0,0,0,5.4,10.2,32,Low
+PCL-MP-1720,Sehore,Forest/Eco-sensitive,29.6,2,47.87,60.02,25.4,0,0,1,1,1,22.4,17.9,56,Medium
+PCL-MP-1721,Raisen,Private Commercial,55.81,4,39.5,58.98,49.3,0,1,0,0,1,42.7,17.0,53,Medium
+PCL-MP-1722,Raisen,Private Commercial,18.46,2,30.01,36.46,21.5,0,0,0,0,0,18.7,2.2,7,Low
+PCL-MP-1723,Ujjain,Private Commercial,7.24,1,57.11,77.17,35.1,0,0,0,0,0,21.8,1.0,3,Low
+PCL-MP-1724,Jabalpur,Forest/Eco-sensitive,1.3,3,88.9,85.39,-3.9,0,0,1,1,0,23.7,13.4,42,Medium
+PCL-MP-1725,Ujjain,Agricultural,41.56,6,76.37,109.82,43.8,0,0,0,0,1,11.2,13.4,42,Medium
+PCL-MP-1726,Dewas,Forest/Eco-sensitive,32.48,1,107.9,239.1,121.6,0,1,0,1,1,37.7,19.8,62,Medium
+PCL-MP-1727,Bhopal,Tribal Schedule V,24.12,14,88.87,116.45,31.0,0,0,0,0,1,29.9,19.8,62,Medium
+PCL-MP-1728,Bhopal,Government Wasteland,81.41,3,26.41,38.88,47.2,1,0,0,0,1,27.5,15.7,49,Medium
+PCL-MP-1729,Bhopal,Agricultural,79.85,8,108.88,238.75,119.3,0,0,0,0,1,9.2,19.8,62,Medium
+PCL-MP-1730,Indore,Tribal Schedule V,74.54,14,67.89,77.08,13.5,0,0,0,0,1,39.4,18.6,58,Medium
+PCL-MP-1731,Bhopal,Private Commercial,46.19,2,42.99,87.79,104.2,0,1,0,0,1,32.4,17.9,56,Medium
+PCL-MP-1732,Indore,Government Wasteland,28.09,4,90.14,114.44,27.0,1,0,0,0,1,6.5,13.8,43,Medium
+PCL-MP-1733,Bhopal,Forest/Eco-sensitive,28.62,2,104.2,214.78,106.1,0,0,1,1,0,33.3,17.9,56,Medium
+PCL-MP-1734,Raisen,Forest/Eco-sensitive,66.84,4,93.72,119.41,27.4,2,1,0,1,0,33.6,29.1,91,High
+PCL-MP-1735,Ujjain,Agricultural,32.63,1,51.42,92.84,80.6,1,0,0,0,0,36.0,15.7,49,Medium
+PCL-MP-1736,Ujjain,Agricultural,56.59,4,34.06,32.81,-3.7,0,0,0,0,0,13.7,3.8,12,Low
+PCL-MP-1737,Indore,Private Commercial,12.83,1,75.9,106.1,39.8,0,1,0,0,0,44.9,9.0,28,Low
+PCL-MP-1738,Jabalpur,Private Commercial,53.83,2,67.08,132.21,97.1,1,0,0,0,0,9.9,15.7,49,Medium
+PCL-MP-1739,Jabalpur,Forest/Eco-sensitive,78.51,2,97.83,196.12,100.5,1,0,1,1,1,18.0,26.2,82,High
+PCL-MP-1740,Raisen,Forest/Eco-sensitive,84.18,4,58.24,99.9,71.5,1,1,0,1,1,6.3,26.9,84,High
+PCL-MP-1741,Ujjain,Agricultural,79.47,5,63.89,75.86,18.7,1,0,0,0,1,10.2,13.1,41,Medium
+PCL-MP-1742,Jabalpur,Agricultural,55.53,6,86.71,154.75,78.5,1,1,0,0,0,19.5,23.4,73,High
+PCL-MP-1743,Bhopal,Agricultural,40.54,1,34.97,59.36,69.7,1,1,0,0,0,11.4,13.8,43,Medium
+PCL-MP-1744,Bhopal,Agricultural,41.79,3,80.49,120.28,49.4,0,0,0,0,1,35.1,11.2,35,Low
+PCL-MP-1745,Dewas,Private Commercial,38.11,1,35.2,37.66,7.0,0,0,0,0,1,1.5,1.9,6,Low
+PCL-MP-1746,Sehore,Government Wasteland,41.02,1,92.52,112.19,21.3,0,0,0,0,1,25.9,5.8,18,Low
+PCL-MP-1747,Ujjain,Forest/Eco-sensitive,16.12,1,58.47,124.85,113.5,0,0,1,1,0,24.5,17.6,55,Medium
+PCL-MP-1748,Ujjain,Forest/Eco-sensitive,10.99,2,107.08,241.09,125.1,1,1,1,1,0,36.1,30.7,96,High
+PCL-MP-1749,Indore,Forest/Eco-sensitive,7.92,3,97.37,97.44,0.1,0,0,1,1,0,24.7,12.2,38,Medium

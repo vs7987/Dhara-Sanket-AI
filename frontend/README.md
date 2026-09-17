@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dhara-Sanket AI — Frontend (Next.js 16 + React 19)
 
-## Getting Started
+This is the responsive Gov-Tech frontend portal for **Dhara-Sanket AI** (SIH Problem Statement **SIH26017**).
 
-First, run the development server:
+---
 
+## 🚀 Getting Started
+
+First, ensure the Python backend is running on `http://localhost:8000`:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# In backend directory
+python -m uvicorn main:app --port 8000 --reload
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then start the Next.js frontend development server:
+```bash
+npm install
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🗺️ Application Routes
 
-To learn more about Next.js, take a look at the following resources:
+* `/` — **Landing Page**: Real-time corridor survey alignment tracking across 5 Madhya Pradesh checkpoints (Indore, Ujjain, Bhopal, Raisen, Jabalpur).
+* `/dashboard` — **Command Dashboard**: Executive KPIs, live hotspot radar, real-time alert feed, and the 6-Step Decision Stepper (Slide 5).
+* `/gis-map` — **Cadastral GIS Map & What-If Simulation**: Interactive parcel risk score inspector (0-100), 5-factor XAI breakdown, and live policy intervention simulation sliders.
+* `/documents` — **Digital Document Submission & AI Verification**: Deed upload and automated OCR cross-matching against MP Bhulekh (Slide 2).
+* `/active-projects` — **Active Projects Registry**: Filterable corridor table with search and "+ Add Project" modal.
+* `/high-risk` — **High-Risk Triage**: Focused view for parcels with active court stays and urgent dispute alerts.
+* `/reports` — **RFCTLARR 2013 Compliance Analytics**: Donut, Bar, and Line charts for risk distribution and district trends.
+* `/audit-logs` — **Statutory Audit Trails**: Immutable event ledger tagged by RFCTLARR Act sections.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🔌 API Client Architecture (`lib/api.js`)
 
-## Deploy on Vercel
+All pages fetch dynamic data from the FastAPI REST API via `lib/api.js`:
+* `getProjects(params)` &rarr; `GET /api/projects`
+* `createProject(data)` &rarr; `POST /api/projects`
+* `getParcels()` &rarr; `GET /api/parcels`
+* `runSimulation(payload)` &rarr; `POST /api/simulate`
+* `getDocuments()` &rarr; `GET /api/documents`
+* `verifyDocument(data)` &rarr; `POST /api/documents/verify`
+* `getAuditLogs()` &rarr; `GET /api/audit-logs`
+* `getPlatformStats()` &rarr; `GET /api/stats`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Resilient Fallback**: If the backend is temporarily offline, `lib/api.js` automatically falls back to local seed data in `lib/mockData.js`, ensuring the frontend remains 100% demo-ready during presentations.

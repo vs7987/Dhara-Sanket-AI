@@ -455,38 +455,35 @@ export default function HomePage() {
           })}
 
           {/* ============================================================ */}
-          {/* THE TRAVELING LIGHT ORB (Scroll-Controlled Left <-> Right) */}
+          {/* CADASTRAL SURVEY ALIGNMENT MARKER (Scroll Position Tracker) */}
           {/* ============================================================ */}
           <g
             transform={`translate(${orbCoords.x}, ${orbCoords.y})`}
-            filter="url(#orbGlow)"
             className={styles.travelingLightOrb}
           >
-            {/* Outer halo */}
-            <circle cx="0" cy="0" r="32" fill="url(#lightOrbRadial)" />
-            {/* Mid high-intensity neon circle */}
-            <circle cx="0" cy="0" r="14" fill="#10b981" opacity="0.85" />
-            {/* Supercharged core */}
-            <circle cx="0" cy="0" r="6" fill="#34d399" />
-            <circle cx="0" cy="0" r="3" fill="#ffffff" />
+            {/* Clean Survey Pin / Target Crosshair */}
+            <circle cx="0" cy="0" r="14" fill="rgba(16, 185, 129, 0.15)" stroke="#10b981" strokeWidth="1.8" />
+            <circle cx="0" cy="0" r="4.5" fill="#10b981" />
+            <line x1="-18" y1="0" x2="18" y2="0" stroke="#10b981" strokeWidth="1" strokeDasharray="2 2" />
+            <line x1="0" y1="-18" x2="0" y2="18" stroke="#10b981" strokeWidth="1" strokeDasharray="2 2" />
 
-            {/* Dynamic Real-time HUD Beacon Flag attached to light */}
-            <g transform="translate(18, -28)">
+            {/* Clean Telemetry Readout Flag */}
+            <g transform="translate(20, -26)">
               <rect
                 x="0"
                 y="0"
-                width="155"
+                width="165"
                 height="32"
                 rx="6"
-                fill="rgba(7, 12, 20, 0.92)"
-                stroke="#10b981"
+                fill="#0f172a"
+                stroke="#334155"
                 strokeWidth="1.2"
               />
               <circle cx="12" cy="16" r="3.5" fill="#10b981" className={styles.beaconBlink} />
-              <text x="22" y="14" fill="#34d399" fontSize="9" fontWeight="700" fontFamily="monospace">
-                TRACKING {scrollDirection === 'down' ? 'EASTBOUND →' : 'WESTBOUND ←'}
+              <text x="22" y="13" fill="#94a3b8" fontSize="8.5" fontFamily="monospace" fontWeight="600">
+                SURVEY ALIGNMENT · {scrollDirection === 'down' ? 'EASTBOUND' : 'WESTBOUND'}
               </text>
-              <text x="22" y="24" fill="#e2e8f0" fontSize="9" fontFamily="monospace">
+              <text x="22" y="24" fill="#ffffff" fontSize="9.5" fontFamily="monospace" fontWeight="700">
                 {Math.round(scrollProgress * 100)}% · {activeNode.name.split(' ')[0]}
               </text>
             </g>
@@ -694,17 +691,17 @@ export default function HomePage() {
         <section id="overview" className={styles.heroSection}>
           <div className={styles.heroBadge}>
             <span className={styles.heroBadgeDot} />
-            <span>AI-POWERED REVENUE GOVERNANCE · SMART INDIA HACKATHON 2026</span>
+            <span>GOVERNMENT OF MADHYA PRADESH · REVENUE DEPARTMENT · SIH 2026 (SIH26017)</span>
           </div>
 
           <h1 className={styles.heroTitle}>
-            Next-Gen Land Acquisition <br />
-            <span className={styles.heroTitleGradient}>Risk Monitoring Intelligence</span>
+            Dhara-Sanket AI <br />
+            <span className={styles.heroTitleGradient}>Land Acquisition Delay Early-Warning System</span>
           </h1>
 
           <p className={styles.heroSubtitle}>
-            Protecting Land, Enabling Trust. Seamlessly combining high-resolution satellite GIS telemetry,
-            cadastral deed verification, and predictive machine learning to eliminate land disputes across Madhya Pradesh.
+            Protecting Land, Enabling Trust. An automated predictive analytics system combining cadastral deed synchronization,
+            explainable risk scoring (XAI), and RFCTLARR 2013 intervention simulations to proactively eliminate infrastructure delays.
           </p>
 
           <div className={styles.heroCtaGroup}>
