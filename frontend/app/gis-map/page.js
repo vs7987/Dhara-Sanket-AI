@@ -3,16 +3,16 @@
 import { useState, useEffect } from 'react';
 import GISMap from '../../components/GISMap';
 import RiskScoreRing from '../../components/RiskScoreRing';
-import { hotspots, parcels as initialParcels } from '../../lib/mockData';
+import { cadastralParcels } from '../../lib/mockData';
 import { getParcels, runSimulation } from '../../lib/api';
 import styles from './page.module.css';
 
 const factorLabels = {
-  ownershipDispute: 'Ownership Dispute',
-  documentMismatch: 'Document Mismatch',
-  encroachment: 'Encroachment Risk',
-  landUseViolation: 'Land Use Violation',
-  priceAnomaly: 'Price Anomaly',
+  ownershipDispute: 'Ownership & Title Dispute',
+  documentMismatch: 'Bhulekh vs Registry Mismatch',
+  encroachment: 'Satellite Encroachment Risk',
+  landUseViolation: 'Agricultural Reclassification',
+  priceAnomaly: 'Circle vs Market Rate Deviation',
 };
 
 const factorColors = {
@@ -24,8 +24,8 @@ const factorColors = {
 };
 
 export default function GISMapPage() {
-  const [parcelsList, setParcelsList] = useState(initialParcels);
-  const [selectedIdx, setSelectedIdx] = useState(0);
+  const [parcelsList, setParcelsList] = useState(cadastralParcels);
+  const [selectedParcel, setSelectedParcel] = useState(cadastralParcels[0]);
   const [activeTab, setActiveTab] = useState('xai'); // 'xai' or 'simulation'
 
   // What-If Simulation State
@@ -36,26 +36,32 @@ export default function GISMapPage() {
   const [simResult, setSimResult] = useState(null);
   const [simLoading, setSimLoading] = useState(false);
 
-  // Fetch real parcels from backend API on mount
+  // Fetch real parcels from backend API on mount if available
   useEffect(() => {
     getParcels().then((data) => {
       if (data && data.length > 0) {
-        setParcelsList(data);
+        // Merge API data with rich mock data
+        setParcelsList((prev) => {
+          return prev.map((p, idx) => ({
+            ...p,
+            ...(data[idx] || {}),
+          }));
+        });
       }
     });
   }, []);
 
-  const parcel = parcelsList[selectedIdx % parcelsList.length];
+  const parcel = selectedParcel || parcelsList[0];
 
   // Run What-If Simulation
   const handleRunSimulation = async () => {
     setSimLoading(true);
     const payload = {
       base_features: {
-        area_ha: parseFloat(parcel.area) || 15.0,
-        num_title_holders: 4,
-        rate_deviation_pct: parcel.riskScore > 70 ? 65.0 : 25.0,
-        active_court_stays: parcel.riskScore > 75 ? 1 : 0,
+        area_ha: parseFloat(parcel.area) || 12.5,
+        num_title_holders: parcel.riskScore > 75 ? 5 : 2,
+        rate_deviation_pct: parcel.riskScore > 70 ? 75.0 : 20.0,
+        active_court_stays: parcel.courtStay !== 'None' ? 1 : 0,
         deed_mismatch: parcel.riskFactors?.documentMismatch > 50 ? 1 : 0,
         gram_sabha_pending: parcel.district === 'Raisen' ? 1 : 0,
         is_forest: parcel.district === 'Raisen' ? 1 : 0,
@@ -69,8 +75,20 @@ export default function GISMapPage() {
       rehab_package_enhanced: true,
     };
 
-    const res = await runSimulation(payload);
-    setSimResult(res);
+    try {
+      const res = await runSimulation(payload);
+      setSimResult(res);
+    } catch {
+      // Fallback calculation for hackathon demo resilience
+      const origRisk = parcel.riskScore;
+      const reduction = Math.round((multiplier - 1.0) * 18 + (fastTrackTitle ? 14 : 0) + (courtStayResolved ? 20 : 0) + (gramSabhaCleared ? 12 : 0));
+      const simulatedScore = Math.max(12, origRisk - reduction);
+      setSimResult({
+        baseline: { risk_score: origRisk, predicted_delay_months: parseFloat(parcel.estimatedDelay) || 9.5 },
+        simulated: { risk_score: simulatedScore, predicted_delay_months: Math.max(1.2, (parseFloat(parcel.estimatedDelay) || 9.5) * (simulatedScore / origRisk)) },
+        impact: { risk_reduction_points: origRisk - simulatedScore, months_saved: +( (parseFloat(parcel.estimatedDelay) || 9.5) * (1 - simulatedScore / origRisk) ).toFixed(1) }
+      });
+    }
     setSimLoading(false);
   };
 
@@ -79,7 +97,7 @@ export default function GISMapPage() {
   return (
     <div className={styles.page}>
       <div className={styles.grid}>
-        {/* Left Column: Spatial GIS Map */}
+        {/* Left Column: Multi-Scale Spatial GIS Map */}
         <div className={styles.mapCol}>
           <div className={styles.mapCard}>
             <div className={styles.mapHeader}>
@@ -88,14 +106,23 @@ export default function GISMapPage() {
                   <path d="M2 5l5-2 6 3 5-2v10l-5 2-6-3-5 2V5z" stroke="#059669" strokeWidth="1.4" strokeLinejoin="round" />
                   <path d="M7 3v10M13 6v10" stroke="#059669" strokeWidth="1.4" />
                 </svg>
-                Cadastral Survey GIS Telemetry
+                Geospatial Land Acquisition Risk Map (Multi-Scale)
               </h3>
               <span className={styles.liveTag}>
                 <span className={styles.liveDot} />
-                MP Revenue Department Live
+                PM Gati Shakti & Bhulekh Live
               </span>
             </div>
-            <GISMap hotspots={hotspots} large onSelectHotspot={setSelectedIdx} />
+            
+            {/* Interactive Multi-Scale GIS Map */}
+            <GISMap
+              large
+              onSelectParcel={(plot) => {
+                setSelectedParcel(plot);
+                setSimResult(null); // reset sim when new plot is selected
+              }}
+              selectedParcelId={parcel.id}
+            />
           </div>
         </div>
 
@@ -103,14 +130,14 @@ export default function GISMapPage() {
         <div className={styles.detailCol}>
           <div className={styles.detailCard}>
             <div className={styles.parcelInfo}>
-              <div className={styles.parcelId}>{parcel.id}</div>
-              <h4 className={styles.parcelName}>{parcel.name}</h4>
+              <div className={styles.parcelId}>{parcel.id} · Khasra {parcel.khasraNo}</div>
+              <h4 className={styles.parcelName}>{parcel.name || `Survey Plot ${parcel.khasraNo}, ${parcel.village}`}</h4>
               <div className={styles.metaRow}>
                 <span className={styles.meta}>
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                     <path d="M2 4l4-2 4 2 4-2v8l-4 2-4-2-4 2V4z" stroke="#64748b" strokeWidth="1.2" />
                   </svg>
-                  {parcel.district} District
+                  {parcel.district} ({parcel.state})
                 </span>
                 <span className={styles.meta}>
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -122,7 +149,7 @@ export default function GISMapPage() {
               </div>
               <div className={styles.infoGrid}>
                 <div className={styles.infoItem}>
-                  <span className={styles.infoLabel}>Title Holder</span>
+                  <span className={styles.infoLabel}>Primary Title Holder</span>
                   <span className={styles.infoValue}>{parcel.owner}</span>
                 </div>
                 <div className={styles.infoItem}>
@@ -130,8 +157,24 @@ export default function GISMapPage() {
                   <span className={styles.infoValue}>{parcel.landUse}</span>
                 </div>
                 <div className={styles.infoItem}>
-                  <span className={styles.infoLabel}>Confidence Level</span>
-                  <span className={styles.infoValue} style={{ color: '#38bdf8' }}>92% (High)</span>
+                  <span className={styles.infoLabel}>Bhulekh Mutation Status</span>
+                  <span className={styles.infoValue} style={{ color: parcel.riskScore > 70 ? '#ef4444' : '#10b981' }}>
+                    {parcel.mutationStatus}
+                  </span>
+                </div>
+                <div className={styles.infoItem}>
+                  <span className={styles.infoLabel}>Circle Rate vs Market Demand</span>
+                  <span className={styles.infoValue}>{parcel.circleRate} / {parcel.marketDemand}</span>
+                </div>
+                <div className={styles.infoItem}>
+                  <span className={styles.infoLabel}>Judicial Injunction / Stay</span>
+                  <span className={styles.infoValue} style={{ color: parcel.courtStay !== 'None' ? '#ef4444' : '#10b981' }}>
+                    {parcel.courtStay}
+                  </span>
+                </div>
+                <div className={styles.infoItem}>
+                  <span className={styles.infoLabel}>RFCTLARR Solatium Status</span>
+                  <span className={styles.infoValue}>{parcel.rfctlarrStatus}</span>
                 </div>
               </div>
             </div>
@@ -191,11 +234,11 @@ export default function GISMapPage() {
                 </div>
 
                 {parcel.recommendedAction && (
-                  <div style={{ marginTop: '16px', padding: '12px', borderRadius: '8px', background: 'rgba(16,185,129,0.08)', border: '1px solid rgba(16,185,129,0.2)' }}>
-                    <div style={{ fontSize: '11.5px', fontWeight: '700', color: '#10b981', marginBottom: '4px' }}>
-                      RECOMMENDED MITIGATION ACTION
+                  <div style={{ marginTop: '16px', padding: '12px', borderRadius: '8px', background: 'rgba(16,185,129,0.08)', border: '1px solid rgba(16,185,129,0.25)' }}>
+                    <div style={{ fontSize: '11px', fontWeight: '700', color: '#10b981', marginBottom: '4px', letterSpacing: '0.04em' }}>
+                      RECOMMENDED MITIGATION INTERVENTION
                     </div>
-                    <div style={{ fontSize: '11px', color: '#cbd5e1', lineHeight: '1.4' }}>
+                    <div style={{ fontSize: '11.5px', color: '#cbd5e1', lineHeight: '1.45' }}>
                       {parcel.recommendedAction}
                     </div>
                   </div>
@@ -223,7 +266,7 @@ export default function GISMapPage() {
                 </div>
 
                 <label className={styles.simToggleRow}>
-                  <span className={styles.simToggleLabel}>Fast-Track Title Verification</span>
+                  <span className={styles.simToggleLabel}>Fast-Track Title Verification (Bhulekh API)</span>
                   <input
                     type="checkbox"
                     checked={fastTrackTitle}
@@ -233,7 +276,7 @@ export default function GISMapPage() {
                 </label>
 
                 <label className={styles.simToggleRow}>
-                  <span className={styles.simToggleLabel}>Resolve Injunction via Lok Adalat</span>
+                  <span className={styles.simToggleLabel}>Resolve Injunction via Lok Adalat / Mediation</span>
                   <input
                     type="checkbox"
                     checked={courtStayResolved}
@@ -262,7 +305,7 @@ export default function GISMapPage() {
 
                 {simResult && (
                   <div className={styles.impactCard}>
-                    <div className={styles.impactTitle}>Simulated Intervention Impact</div>
+                    <div className={styles.impactTitle}>Simulated Policy Impact</div>
                     <div className={styles.impactGrid}>
                       <div className={styles.impactMetric}>
                         <span className={styles.impactMetricNum} style={{ color: '#10b981' }}>
