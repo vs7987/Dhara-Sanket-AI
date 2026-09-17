@@ -28,6 +28,16 @@ const navItems = [
     ),
   },
   {
+    label: 'GIS Map & XAI',
+    href: '/gis-map',
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 5l5-2 6 3 5-2v12l-5 2-6-3-5 2V5z" stroke="currentColor" strokeWidth="1.8" />
+        <path d="M7 3v12M13 6v12" stroke="currentColor" strokeWidth="1.8" />
+      </svg>
+    ),
+  },
+  {
     label: 'Active Projects',
     href: '/active-projects',
     icon: (
@@ -37,7 +47,7 @@ const navItems = [
     ),
   },
   {
-    label: 'High Risk Projects',
+    label: 'High Risk Triage',
     href: '/high-risk',
     icon: (
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -48,22 +58,31 @@ const navItems = [
     ),
   },
   {
-    label: 'GIS Map',
-    href: '/gis-map',
+    label: 'Verify Documents',
+    href: '/documents',
     icon: (
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M2 5l5-2 6 3 5-2v12l-5 2-6-3-5 2V5z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
-        <path d="M7 3v12M13 6v12" stroke="currentColor" strokeWidth="1.8" />
+        <path d="M14 2H6a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V4a2 2 0 00-2-2z" stroke="currentColor" strokeWidth="1.8" />
+        <path d="M8 7h4M8 10h4M8 13h2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
       </svg>
     ),
   },
   {
-    label: 'Reports',
+    label: 'Reports & Audits',
     href: '/reports',
     icon: (
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="3" y="2" width="14" height="16" rx="2" stroke="currentColor" strokeWidth="1.8" />
         <path d="M7 7h6M7 10h6M7 13h4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      </svg>
+    ),
+  },
+  {
+    label: 'Audit Trails',
+    href: '/audit-logs',
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 18s6-3 6-8V4l-6-2-6 2v6c0 5 6 8 6 8z" stroke="currentColor" strokeWidth="1.8" />
       </svg>
     ),
   },
@@ -78,7 +97,7 @@ export default function Sidebar({ isOpen, onClose }) {
       <aside className={`${styles.sidebar} ${isOpen ? styles.open : ''}`}>
         <div className={styles.brand}>
           <div className={styles.logoMark}>
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="36" height="36" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M20 3L35 12V28L20 37L5 28V12L20 3Z"
                 fill="#059669"
@@ -94,7 +113,6 @@ export default function Sidebar({ isOpen, onClose }) {
                 strokeWidth="1.5"
               />
               <circle cx="20" cy="20" r="4" fill="#059669" />
-              <path d="M20 16v-3M20 27v-3M24 20h3M13 20h3" stroke="#059669" strokeWidth="1.2" strokeLinecap="round" />
             </svg>
           </div>
           <div className={styles.brandText}>
@@ -121,14 +139,15 @@ export default function Sidebar({ isOpen, onClose }) {
         </nav>
 
         <div className={styles.sidebarFooter}>
-          {/* TODO: Add onClick handler to open an About/SIH project info modal
-              or link to the Smart India Hackathon project page (SIH26017). */}
           <div className={styles.footerCard}>
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
               <circle cx="9" cy="9" r="7" stroke="#059669" strokeWidth="1.5" />
               <path d="M9 6v3l2 2" stroke="#059669" strokeWidth="1.5" strokeLinecap="round" />
             </svg>
-            <span>SIH 2026 Project</span>
+            <div>
+              <div style={{ fontSize: '11px', fontWeight: '700', color: '#10b981' }}>SIH 2026 · TEAM CATALYST</div>
+              <div style={{ fontSize: '10px', color: '#94a3b8' }}>PS ID: SIH26017</div>
+            </div>
           </div>
         </div>
       </aside>
