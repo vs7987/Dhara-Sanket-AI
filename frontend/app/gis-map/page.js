@@ -3,16 +3,16 @@
 import { useState, useEffect } from 'react';
 import GISMap from '../../components/GISMap';
 import RiskScoreRing from '../../components/RiskScoreRing';
-import { cadastralParcels } from '../../lib/mockData';
+import { cadastralParcels, indiaStatesRisk, stateDistricts } from '../../lib/mockData';
 import { getParcels, runSimulation } from '../../lib/api';
 import styles from './page.module.css';
 
 const factorLabels = {
-  ownershipDispute: 'Ownership & Title Dispute',
-  documentMismatch: 'Bhulekh vs Registry Mismatch',
-  encroachment: 'Satellite Encroachment Risk',
-  landUseViolation: 'Agricultural Reclassification',
-  priceAnomaly: 'Circle vs Market Rate Deviation',
+  ownershipDispute: 'Multiple Ownership Claims & Disputes',
+  documentMismatch: 'Land Registry vs Government Record Mismatch',
+  encroachment: 'Physical Encroachment / Boundary Overlap',
+  landUseViolation: 'Agricultural Land Reclassification Needed',
+  priceAnomaly: 'Owner Asking Price Much Higher Than Circle Rate',
 };
 
 const factorColors = {
@@ -26,21 +26,27 @@ const factorColors = {
 export default function GISMapPage() {
   const [parcelsList, setParcelsList] = useState(cadastralParcels);
   const [selectedParcel, setSelectedParcel] = useState(cadastralParcels[0]);
-  const [activeTab, setActiveTab] = useState('xai'); // 'xai' or 'simulation'
+  const [selectedState, setSelectedState] = useState(indiaStatesRisk[0]);
+  const [activeTab, setActiveTab] = useState('reasons'); // 'reasons' or 'simulation'
+  const [simScope, setSimScope] = useState('national'); // 'national' (All India) or 'parcel' (Selected Plot)
 
-  // What-If Simulation State
+  // Solution Simulator State
   const [multiplier, setMultiplier] = useState(1.4);
   const [fastTrackTitle, setFastTrackTitle] = useState(true);
   const [courtStayResolved, setCourtStayResolved] = useState(false);
   const [gramSabhaCleared, setGramSabhaCleared] = useState(true);
   const [simResult, setSimResult] = useState(null);
+  const [nationalSimResult, setNationalSimResult] = useState({
+    projectsProtected: 142,
+    monthsSavedAvg: 5.8,
+    capitalSavedCr: 18450,
+    riskReductionPct: 38,
+  });
   const [simLoading, setSimLoading] = useState(false);
 
-  // Fetch real parcels from backend API on mount if available
   useEffect(() => {
     getParcels().then((data) => {
       if (data && data.length > 0) {
-        // Merge API data with rich mock data
         setParcelsList((prev) => {
           return prev.map((p, idx) => ({
             ...p,
@@ -53,9 +59,35 @@ export default function GISMapPage() {
 
   const parcel = selectedParcel || parcelsList[0];
 
-  // Run What-If Simulation
+  // Calculate simulated outcomes
   const handleRunSimulation = async () => {
     setSimLoading(true);
+
+    if (simScope === 'national') {
+      // National India-wide simulation calculation
+      setTimeout(() => {
+        const multEffect = (parseFloat(multiplier) - 1.0) * 120;
+        const titleEffect = fastTrackTitle ? 45 : 0;
+        const courtEffect = courtStayResolved ? 60 : 0;
+        const gramEffect = gramSabhaCleared ? 35 : 0;
+
+        const totalProjectsSaved = Math.min(186, Math.round(75 + multEffect + titleEffect + courtEffect + gramEffect));
+        const avgMonthsSaved = +(2.8 + (parseFloat(multiplier) - 1.0) * 3.5 + (courtStayResolved ? 2.2 : 0) + (fastTrackTitle ? 1.4 : 0)).toFixed(1);
+        const capitalSaved = Math.round(totalProjectsSaved * 125);
+        const riskReduction = Math.min(65, Math.round(20 + (parseFloat(multiplier) - 1.0) * 25 + (courtStayResolved ? 18 : 0) + (fastTrackTitle ? 12 : 0)));
+
+        setNationalSimResult({
+          projectsProtected: totalProjectsSaved,
+          monthsSavedAvg: avgMonthsSaved,
+          capitalSavedCr: capitalSaved,
+          riskReductionPct: riskReduction,
+        });
+        setSimLoading(false);
+      }, 300);
+      return;
+    }
+
+    // Individual Parcel Simulation
     const payload = {
       base_features: {
         area_ha: parseFloat(parcel.area) || 12.5,
@@ -79,7 +111,6 @@ export default function GISMapPage() {
       const res = await runSimulation(payload);
       setSimResult(res);
     } catch {
-      // Fallback calculation for hackathon demo resilience
       const origRisk = parcel.riskScore;
       const reduction = Math.round((multiplier - 1.0) * 18 + (fastTrackTitle ? 14 : 0) + (courtStayResolved ? 20 : 0) + (gramSabhaCleared ? 12 : 0));
       const simulatedScore = Math.max(12, origRisk - reduction);
@@ -92,12 +123,12 @@ export default function GISMapPage() {
     setSimLoading(false);
   };
 
-  const displayedScore = activeTab === 'simulation' && simResult ? simResult.simulated.risk_score : parcel.riskScore;
+  const displayedScore = activeTab === 'simulation' && simScope === 'parcel' && simResult ? simResult.simulated.risk_score : parcel.riskScore;
 
   return (
     <div className={styles.page}>
       <div className={styles.grid}>
-        {/* Left Column: Multi-Scale Spatial GIS Map */}
+        {/* Left Column: Multi-Scale Map */}
         <div className={styles.mapCol}>
           <div className={styles.mapCard}>
             <div className={styles.mapHeader}>
@@ -106,11 +137,11 @@ export default function GISMapPage() {
                   <path d="M2 5l5-2 6 3 5-2v10l-5 2-6-3-5 2V5z" stroke="#059669" strokeWidth="1.4" strokeLinejoin="round" />
                   <path d="M7 3v10M13 6v10" stroke="#059669" strokeWidth="1.4" />
                 </svg>
-                Geospatial Land Acquisition Risk Map (Multi-Scale)
+                Land Acquisition Delay Map
               </h3>
               <span className={styles.liveTag}>
                 <span className={styles.liveDot} />
-                PM Gati Shakti & Bhulekh Live
+                Government Land Records Connected
               </span>
             </div>
             
@@ -119,25 +150,26 @@ export default function GISMapPage() {
               large
               onSelectParcel={(plot) => {
                 setSelectedParcel(plot);
-                setSimResult(null); // reset sim when new plot is selected
+                setSimResult(null);
               }}
+              onSelectState={(st) => setSelectedState(st)}
               selectedParcelId={parcel.id}
             />
           </div>
         </div>
 
-        {/* Right Column: Parcel Detail & XAI / Simulation Panel */}
+        {/* Right Column: Parcel Details & Solution Simulator */}
         <div className={styles.detailCol}>
           <div className={styles.detailCard}>
             <div className={styles.parcelInfo}>
-              <div className={styles.parcelId}>{parcel.id} · Khasra {parcel.khasraNo}</div>
-              <h4 className={styles.parcelName}>{parcel.name || `Survey Plot ${parcel.khasraNo}, ${parcel.village}`}</h4>
+              <div className={styles.parcelId}>Plot No. {parcel.khasraNo} · {parcel.district}</div>
+              <h4 className={styles.parcelName}>{parcel.name || `Land Plot ${parcel.khasraNo}, ${parcel.village}`}</h4>
               <div className={styles.metaRow}>
                 <span className={styles.meta}>
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                     <path d="M2 4l4-2 4 2 4-2v8l-4 2-4-2-4 2V4z" stroke="#64748b" strokeWidth="1.2" />
                   </svg>
-                  {parcel.district} ({parcel.state})
+                  {parcel.district} District ({parcel.state})
                 </span>
                 <span className={styles.meta}>
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -149,64 +181,64 @@ export default function GISMapPage() {
               </div>
               <div className={styles.infoGrid}>
                 <div className={styles.infoItem}>
-                  <span className={styles.infoLabel}>Primary Title Holder</span>
+                  <span className={styles.infoLabel}>Land Owner / Claimants</span>
                   <span className={styles.infoValue}>{parcel.owner}</span>
                 </div>
                 <div className={styles.infoItem}>
-                  <span className={styles.infoLabel}>Land Classification</span>
+                  <span className={styles.infoLabel}>Land Category</span>
                   <span className={styles.infoValue}>{parcel.landUse}</span>
                 </div>
                 <div className={styles.infoItem}>
-                  <span className={styles.infoLabel}>Bhulekh Mutation Status</span>
+                  <span className={styles.infoLabel}>Official Land Register Status</span>
                   <span className={styles.infoValue} style={{ color: parcel.riskScore > 70 ? '#ef4444' : '#10b981' }}>
                     {parcel.mutationStatus}
                   </span>
                 </div>
                 <div className={styles.infoItem}>
-                  <span className={styles.infoLabel}>Circle Rate vs Market Demand</span>
+                  <span className={styles.infoLabel}>Circle Rate / Demand</span>
                   <span className={styles.infoValue}>{parcel.circleRate} / {parcel.marketDemand}</span>
                 </div>
                 <div className={styles.infoItem}>
-                  <span className={styles.infoLabel}>Judicial Injunction / Stay</span>
+                  <span className={styles.infoLabel}>Court Case Status</span>
                   <span className={styles.infoValue} style={{ color: parcel.courtStay !== 'None' ? '#ef4444' : '#10b981' }}>
                     {parcel.courtStay}
                   </span>
                 </div>
                 <div className={styles.infoItem}>
-                  <span className={styles.infoLabel}>RFCTLARR Solatium Status</span>
+                  <span className={styles.infoLabel}>Compensation Status</span>
                   <span className={styles.infoValue}>{parcel.rfctlarrStatus}</span>
                 </div>
               </div>
             </div>
 
-            {/* Risk Assessment Gauge */}
+            {/* Delay Risk Score Gauge */}
             <div className={styles.riskSection}>
               <div className={styles.ringCenter}>
                 <RiskScoreRing score={displayedScore} size={150} strokeWidth={13} />
               </div>
             </div>
 
-            {/* Tabs for XAI vs What-If Simulation */}
+            {/* Tabs for Reasons vs Solution Testing */}
             <div className={styles.tabRow}>
               <button
-                className={`${styles.tabBtn} ${activeTab === 'xai' ? styles.tabBtnActive : ''}`}
-                onClick={() => setActiveTab('xai')}
+                className={`${styles.tabBtn} ${activeTab === 'reasons' ? styles.tabBtnActive : ''}`}
+                onClick={() => setActiveTab('reasons')}
               >
-                Explainable AI (XAI)
+                Why Delay Happens (Reasons)
               </button>
               <button
                 className={`${styles.tabBtn} ${activeTab === 'simulation' ? styles.tabBtnActive : ''}`}
                 onClick={() => {
                   setActiveTab('simulation');
-                  if (!simResult) handleRunSimulation();
+                  if (!simResult && simScope === 'parcel') handleRunSimulation();
                 }}
               >
-                What-If Simulation (USP)
+                Test Solutions & Save Time
               </button>
             </div>
 
-            {/* TAB 1: XAI FACTORS */}
-            {activeTab === 'xai' && (
+            {/* TAB 1: REASONS FOR DELAY */}
+            {activeTab === 'reasons' && (
               <div className={styles.factorsSection}>
                 <div className={styles.factors}>
                   {Object.entries(parcel.riskFactors || {}).map(([key, value]) => (
@@ -217,7 +249,7 @@ export default function GISMapPage() {
                           className={styles.factorValue}
                           style={{ color: value >= 70 ? '#dc2626' : value >= 40 ? '#f59e0b' : '#059669' }}
                         >
-                          {value}%
+                          {value >= 70 ? 'High Delay Risk' : value >= 40 ? 'Moderate' : 'Low'} ({value}%)
                         </span>
                       </div>
                       <div className={styles.factorBar}>
@@ -236,7 +268,7 @@ export default function GISMapPage() {
                 {parcel.recommendedAction && (
                   <div style={{ marginTop: '16px', padding: '12px', borderRadius: '8px', background: 'rgba(16,185,129,0.08)', border: '1px solid rgba(16,185,129,0.25)' }}>
                     <div style={{ fontSize: '11px', fontWeight: '700', color: '#10b981', marginBottom: '4px', letterSpacing: '0.04em' }}>
-                      RECOMMENDED MITIGATION INTERVENTION
+                      RECOMMENDED ACTION FOR OFFICERS
                     </div>
                     <div style={{ fontSize: '11.5px', color: '#cbd5e1', lineHeight: '1.45' }}>
                       {parcel.recommendedAction}
@@ -246,13 +278,54 @@ export default function GISMapPage() {
               </div>
             )}
 
-            {/* TAB 2: WHAT-IF SIMULATION TOOL (Slide 2 & 5 Key USP) */}
+            {/* TAB 2: SOLUTION SIMULATOR (All India & Plot Level) */}
             {activeTab === 'simulation' && (
               <div className={styles.simPanel}>
+                {/* Simulation Scope Toggle: All India vs Selected Plot */}
+                <div style={{ display: 'flex', gap: '6px', background: 'rgba(15,23,42,0.8)', padding: '3px', borderRadius: '6px', border: '1px solid rgba(255,255,255,0.08)' }}>
+                  <button
+                    style={{
+                      flex: 1,
+                      padding: '5px 8px',
+                      fontSize: '11px',
+                      fontWeight: '600',
+                      border: 'none',
+                      borderRadius: '4px',
+                      cursor: 'pointer',
+                      background: simScope === 'national' ? '#0284c7' : 'transparent',
+                      color: simScope === 'national' ? '#ffffff' : '#94a3b8',
+                    }}
+                    onClick={() => {
+                      setSimScope('national');
+                    }}
+                  >
+                    🇮🇳 All India Level Actions
+                  </button>
+                  <button
+                    style={{
+                      flex: 1,
+                      padding: '5px 8px',
+                      fontSize: '11px',
+                      fontWeight: '600',
+                      border: 'none',
+                      borderRadius: '4px',
+                      cursor: 'pointer',
+                      background: simScope === 'parcel' ? '#0284c7' : 'transparent',
+                      color: simScope === 'parcel' ? '#ffffff' : '#94a3b8',
+                    }}
+                    onClick={() => {
+                      setSimScope('parcel');
+                      if (!simResult) handleRunSimulation();
+                    }}
+                  >
+                    📍 Plot {parcel.khasraNo} Actions
+                  </button>
+                </div>
+
                 <div className={styles.simGroup}>
                   <div className={styles.simLabelRow}>
-                    <span>RFCTLARR Compensation Multiplier</span>
-                    <span className={styles.simValue}>{multiplier}x</span>
+                    <span>Land Compensation Offer</span>
+                    <span className={styles.simValue}>{multiplier}x Circle Rate</span>
                   </div>
                   <input
                     type="range"
@@ -263,10 +336,13 @@ export default function GISMapPage() {
                     onChange={(e) => setMultiplier(e.target.value)}
                     className={styles.simSlider}
                   />
+                  <span style={{ fontSize: '10.5px', color: '#94a3b8' }}>
+                    Fair compensation reduces owner disputes and court stays.
+                  </span>
                 </div>
 
                 <label className={styles.simToggleRow}>
-                  <span className={styles.simToggleLabel}>Fast-Track Title Verification (Bhulekh API)</span>
+                  <span className={styles.simToggleLabel}>Fast-track Bhulekh land record verification</span>
                   <input
                     type="checkbox"
                     checked={fastTrackTitle}
@@ -276,7 +352,7 @@ export default function GISMapPage() {
                 </label>
 
                 <label className={styles.simToggleRow}>
-                  <span className={styles.simToggleLabel}>Resolve Injunction via Lok Adalat / Mediation</span>
+                  <span className={styles.simToggleLabel}>Resolve court disputes via Lok Adalat settlement camps</span>
                   <input
                     type="checkbox"
                     checked={courtStayResolved}
@@ -286,7 +362,7 @@ export default function GISMapPage() {
                 </label>
 
                 <label className={styles.simToggleRow}>
-                  <span className={styles.simToggleLabel}>Advance FRA Gram Sabha Consensus</span>
+                  <span className={styles.simToggleLabel}>Organize Gram Sabha / Village meetings for consent</span>
                   <input
                     type="checkbox"
                     checked={gramSabhaCleared}
@@ -300,22 +376,56 @@ export default function GISMapPage() {
                   onClick={handleRunSimulation}
                   disabled={simLoading}
                 >
-                  {simLoading ? 'Simulating ML Model...' : 'Recalculate Interventions'}
+                  {simLoading ? 'Calculating Time Saved...' : 'Calculate Time & Cost Saved'}
                 </button>
 
-                {simResult && (
+                {/* NATIONAL LEVEL RESULTS */}
+                {simScope === 'national' && nationalSimResult && (
                   <div className={styles.impactCard}>
-                    <div className={styles.impactTitle}>Simulated Policy Impact</div>
+                    <div className={styles.impactTitle}>All-India Impact of These Actions</div>
+                    <div className={styles.impactGrid}>
+                      <div className={styles.impactMetric}>
+                        <span className={styles.impactMetricNum} style={{ color: '#10b981' }}>
+                          {nationalSimResult.projectsProtected} Projects
+                        </span>
+                        <span className={styles.impactMetricLabel}>Saved from Long Delays</span>
+                      </div>
+                      <div className={styles.impactMetric}>
+                        <span className={styles.impactMetricNum} style={{ color: '#38bdf8' }}>
+                          {nationalSimResult.monthsSavedAvg} Months
+                        </span>
+                        <span className={styles.impactMetricLabel}>Avg. Project Time Saved</span>
+                      </div>
+                      <div className={styles.impactMetric}>
+                        <span className={styles.impactMetricNum} style={{ color: '#f59e0b' }}>
+                          ₹{nationalSimResult.capitalSavedCr.toLocaleString()} Cr
+                        </span>
+                        <span className={styles.impactMetricLabel}>Cost Overrun Prevented</span>
+                      </div>
+                      <div className={styles.impactMetric}>
+                        <span className={styles.impactMetricNum} style={{ color: '#34d399' }}>
+                          -{nationalSimResult.riskReductionPct}%
+                        </span>
+                        <span className={styles.impactMetricLabel}>National Delay Risk Drop</span>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* PLOT LEVEL RESULTS */}
+                {simScope === 'parcel' && simResult && (
+                  <div className={styles.impactCard}>
+                    <div className={styles.impactTitle}>Plot Level Impact ({parcel.khasraNo})</div>
                     <div className={styles.impactGrid}>
                       <div className={styles.impactMetric}>
                         <span className={styles.impactMetricNum} style={{ color: '#10b981' }}>
                           -{simResult.impact.risk_reduction_points} pts
                         </span>
-                        <span className={styles.impactMetricLabel}>Risk Score Reduction</span>
+                        <span className={styles.impactMetricLabel}>Delay Risk Dropped to {simResult.simulated.risk_score}%</span>
                       </div>
                       <div className={styles.impactMetric}>
                         <span className={styles.impactMetricNum} style={{ color: '#38bdf8' }}>
-                          {simResult.impact.months_saved} Mos
+                          {simResult.impact.months_saved} Months
                         </span>
                         <span className={styles.impactMetricLabel}>Acquisition Time Saved</span>
                       </div>

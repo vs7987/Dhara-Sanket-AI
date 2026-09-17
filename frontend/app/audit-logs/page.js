@@ -30,16 +30,16 @@ export default function AuditLogsPage() {
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="2">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
             </svg>
-            Statutory Audit Trail & Security Governance
+            Official Action Log & Legal Compliance Record
           </h1>
           <p className={styles.subtitle}>
-            Immutable event ledger for RFCTLARR 2013 compliance and decision defensibility (SIH Slide 3 & 6)
+            Official log of all officer decisions, document checks, and compensation reviews under the Land Acquisition Act (RFCTLARR 2013)
           </p>
         </div>
 
         <span className={styles.badge}>
           <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#10b981', display: 'inline-block' }}></span>
-          AUDIT LOGGING: ACTIVE
+          OFFICIAL LOGGING: ACTIVE
         </span>
       </div>
 
@@ -48,13 +48,13 @@ export default function AuditLogsPage() {
           <table className={styles.table}>
             <thead>
               <tr>
-                <th>Event ID</th>
-                <th>Action Category</th>
-                <th>Authorizing Official / System</th>
-                <th>Target Asset / Sector</th>
-                <th>Timestamp</th>
-                <th>Statutory Compliance Rule</th>
-                <th>Audit Details & Action Log</th>
+                <th>Log ID</th>
+                <th>Action Taken</th>
+                <th>Authorized Officer</th>
+                <th>Target Project / Plot</th>
+                <th>Date & Time</th>
+                <th>Legal Rule / Section</th>
+                <th>Action Summary & Notes</th>
               </tr>
             </thead>
             <tbody>
@@ -63,7 +63,7 @@ export default function AuditLogsPage() {
                   <td className={styles.auditId}>{item.id}</td>
                   <td>
                     <span className={`${styles.actionTag} ${getActionClass(item.action)}`}>
-                      {item.action}
+                      {item.action.replace('_', ' ')}
                     </span>
                   </td>
                   <td style={{ fontWeight: '600', color: '#ffffff' }}>{item.officer}</td>

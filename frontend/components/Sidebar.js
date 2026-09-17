@@ -28,7 +28,7 @@ const navItems = [
     ),
   },
   {
-    label: 'GIS Map & XAI',
+    label: 'Land Map & Simulator',
     href: '/gis-map',
     icon: (
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -47,7 +47,7 @@ const navItems = [
     ),
   },
   {
-    label: 'High Risk Triage',
+    label: 'High Delay Projects',
     href: '/high-risk',
     icon: (
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -58,7 +58,7 @@ const navItems = [
     ),
   },
   {
-    label: 'Verify Documents',
+    label: 'Verify Land Records',
     href: '/documents',
     icon: (
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -68,7 +68,7 @@ const navItems = [
     ),
   },
   {
-    label: 'Reports & Audits',
+    label: 'Summary Reports',
     href: '/reports',
     icon: (
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -78,7 +78,7 @@ const navItems = [
     ),
   },
   {
-    label: 'Audit Trails',
+    label: 'Officer Action Logs',
     href: '/audit-logs',
     icon: (
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -116,8 +116,8 @@ export default function Sidebar({ isOpen, onClose }) {
             </svg>
           </div>
           <div className={styles.brandText}>
-            <h1 className={styles.brandName}>Dhara Sanket AI</h1>
-            <p className={styles.tagline}>Protecting Land, Enabling Trust</p>
+            <h1 className={styles.brandName}>Dhara Sanket</h1>
+            <p className={styles.tagline}>Land Acquisition Early Warning System</p>
           </div>
         </div>
 
@@ -145,8 +145,8 @@ export default function Sidebar({ isOpen, onClose }) {
               <path d="M9 6v3l2 2" stroke="#059669" strokeWidth="1.5" strokeLinecap="round" />
             </svg>
             <div>
-              <div style={{ fontSize: '11px', fontWeight: '700', color: '#10b981' }}>SIH 2026 · TEAM CATALYST</div>
-              <div style={{ fontSize: '10px', color: '#94a3b8' }}>PS ID: SIH26017</div>
+              <div style={{ fontSize: '11px', fontWeight: '700', color: '#10b981' }}>SMART INDIA HACKATHON</div>
+              <div style={{ fontSize: '10px', color: '#94a3b8' }}>Problem Statement: SIH26017</div>
             </div>
           </div>
         </div>

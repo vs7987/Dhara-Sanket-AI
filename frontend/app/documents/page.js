@@ -61,10 +61,10 @@ export default function DocumentsPage() {
               <line x1="16" y1="13" x2="8" y2="13" />
               <line x1="16" y1="17" x2="8" y2="17" />
             </svg>
-            Digital Document Submission & AI Verification
+            Land Document Verification & Deed Matching
           </h1>
           <p className={styles.subtitle}>
-            Automated OCR deed cross-matching against MP Bhulekh & Sub-Registrar records (SIH Slide 2)
+            Cross-checks sale deeds and ownership documents directly against MP Bhulekh land records
           </p>
         </div>
 
@@ -72,38 +72,38 @@ export default function DocumentsPage() {
           <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
             <path d="M10 4v12M4 10h12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
           </svg>
-          Upload & Verify Document
+          Upload & Check Document
         </button>
       </div>
 
-      {/* KPI Stats */}
+      {/* Summary Cards */}
       <div className={styles.statsRow}>
         <div className={styles.statCard}>
-          <span className={styles.statLabel}>Total Deeds Uploaded</span>
+          <span className={styles.statLabel}>Total Deeds Checked</span>
           <span className={styles.statValue}>{docs.length}</span>
           <span className={styles.statSub}>Across 5 Districts</span>
         </div>
         <div className={styles.statCard}>
-          <span className={styles.statLabel}>AI Verified Clear</span>
+          <span className={styles.statLabel}>Clean & Verified</span>
           <span className={styles.statValue} style={{ color: '#10b981' }}>{verifiedCount}</span>
-          <span className={styles.statSub}>96.4% OCR Confidence</span>
+          <span className={styles.statSub}>Matches Land Records</span>
         </div>
         <div className={styles.statCard}>
-          <span className={styles.statLabel}>Discrepancies Flagged</span>
+          <span className={styles.statLabel}>Discrepancies Found</span>
           <span className={styles.statValue} style={{ color: '#ef4444' }}>{flaggedCount}</span>
-          <span className={styles.statSub} style={{ color: '#f87171' }}>Requires Revenue Review</span>
+          <span className={styles.statSub} style={{ color: '#f87171' }}>Needs Officer Review</span>
         </div>
         <div className={styles.statCard}>
-          <span className={styles.statLabel}>Verification Standard</span>
+          <span className={styles.statLabel}>Reference Database</span>
           <span className={styles.statValue} style={{ color: '#38bdf8' }}>MP Bhulekh</span>
-          <span className={styles.statSub}>Real-Time API Sync</span>
+          <span className={styles.statSub}>Official Revenue Register</span>
         </div>
       </div>
 
       {/* Document Records Table */}
       <div className={styles.tableCard}>
         <div className={styles.tableHeader}>
-          <h3 className={styles.tableTitle}>Cadastral Document Verification Ledger</h3>
+          <h3 className={styles.tableTitle}>Document Verification Register</h3>
           <span style={{ fontSize: '11px', color: '#94a3b8', fontFamily: 'monospace' }}>
             {docs.length} Documents Processed
           </span>
@@ -116,12 +116,12 @@ export default function DocumentsPage() {
                 <th>Doc ID</th>
                 <th>Document Title</th>
                 <th>Category</th>
-                <th>Parcel ID</th>
+                <th>Plot ID</th>
                 <th>Project Corridor</th>
-                <th>Uploaded By</th>
-                <th>OCR Match %</th>
+                <th>Submitted By</th>
+                <th>Record Match</th>
                 <th>Status</th>
-                <th>Discrepancy Notes</th>
+                <th>Notes / Issues Found</th>
               </tr>
             </thead>
             <tbody>
@@ -134,7 +134,7 @@ export default function DocumentsPage() {
                   <td>{doc.project}</td>
                   <td>{doc.uploadedBy}</td>
                   <td style={{ fontFamily: 'monospace', fontWeight: '700', color: doc.ocrMatchPct >= 90 ? '#10b981' : doc.ocrMatchPct >= 80 ? '#f59e0b' : '#ef4444' }}>
-                    {doc.ocrMatchPct}%
+                    {doc.ocrMatchPct}% Match
                   </td>
                   <td>
                     {doc.verificationStatus === 'Verified' ? (
@@ -146,7 +146,7 @@ export default function DocumentsPage() {
                     )}
                   </td>
                   <td style={{ fontSize: '11.5px', maxWidth: '280px', color: doc.discrepancyDetails?.includes('mismatch') ? '#fca5a5' : '#94a3b8' }}>
-                    {doc.discrepancyDetails || 'None'}
+                    {doc.discrepancyDetails || 'Clean record'}
                   </td>
                 </tr>
               ))}
@@ -161,7 +161,7 @@ export default function DocumentsPage() {
           <div className={styles.overlay} onClick={() => setShowModal(false)} />
           <div className={styles.modal}>
             <div className={styles.modalHeader}>
-              <h3>Upload Document for AI Verification</h3>
+              <h3>Upload Document for Verification</h3>
               <button className={styles.closeBtn} onClick={() => setShowModal(false)}>✕</button>
             </div>
             <form onSubmit={handleVerify} className={styles.modalBody}>
@@ -169,7 +169,7 @@ export default function DocumentsPage() {
                 <label>Document Title</label>
                 <input
                   type="text"
-                  placeholder="e.g. Khasra Form B-1 Extract (Survey 45/2)"
+                  placeholder="e.g. Khasra Form B-1 Extract (Plot 45/2)"
                   className={styles.formInput}
                   value={docName}
                   onChange={(e) => setDocName(e.target.value)}
@@ -194,7 +194,7 @@ export default function DocumentsPage() {
                 </div>
 
                 <div className={styles.formGroup}>
-                  <label>Target Parcel ID</label>
+                  <label>Target Land Plot</label>
                   <select
                     className={styles.formInput}
                     value={parcelId}
@@ -241,7 +241,7 @@ export default function DocumentsPage() {
                   className={styles.submitBtn}
                   disabled={submitting}
                 >
-                  {submitting ? 'Running AI Verification...' : 'Upload & Verify'}
+                  {submitting ? 'Checking Record...' : 'Upload & Check'}
                 </button>
               </div>
             </form>

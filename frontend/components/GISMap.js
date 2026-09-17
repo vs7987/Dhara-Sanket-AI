@@ -17,6 +17,8 @@ export default function GISMap({
   selectedParcelId,
   currentScale = 'national',
   onScaleChange,
+  onSelectState,
+  onSelectDistrict,
 }) {
   const [scaleLevel, setScaleLevel] = useState(currentScale || 'national'); // 'national' | 'district' | 'cadastral'
   const [selectedState, setSelectedState] = useState(indiaStatesRisk[0]); // MP default
@@ -29,7 +31,6 @@ export default function GISMap({
     labels: true,
     cadastralGrid: true,
   });
-  const [zoomLevel, setZoomLevel] = useState(1);
   const [searchQuery, setSearchQuery] = useState('');
 
   // Synchronize internal scale level if controlled from outside
@@ -40,11 +41,13 @@ export default function GISMap({
 
   const handleStateClick = (state) => {
     setSelectedState(state);
+    if (onSelectState) onSelectState(state);
     handleScaleSwitch('district');
   };
 
   const handleDistrictClick = (dist) => {
     setSelectedDistrict(dist);
+    if (onSelectDistrict) onSelectDistrict(dist);
     // Find matching cadastral parcel
     const matchedPlot = cadastralParcels.find((p) => p.district.toLowerCase() === dist.name.toLowerCase()) || cadastralParcels[0];
     setSelectedPlot(matchedPlot);
@@ -71,28 +74,28 @@ export default function GISMap({
             onClick={() => handleScaleSwitch('national')}
           >
             <span className={styles.scaleNumber}>1</span>
-            <span>National Scale (India Heatmap)</span>
+            <span>National View (All India)</span>
           </button>
           <button
             className={`${styles.scaleTab} ${scaleLevel === 'district' ? styles.scaleTabActive : ''}`}
             onClick={() => handleScaleSwitch('district')}
           >
             <span className={styles.scaleNumber}>2</span>
-            <span>State / District Corridors</span>
+            <span>State & Districts ({selectedState.name})</span>
           </button>
           <button
             className={`${styles.scaleTab} ${scaleLevel === 'cadastral' ? styles.scaleTabActive : ''}`}
             onClick={() => handleScaleSwitch('cadastral')}
           >
             <span className={styles.scaleNumber}>3</span>
-            <span>Cadastral Survey (Khasra Plots)</span>
+            <span>Village Land Plots (Khasra)</span>
           </button>
         </div>
 
         {/* Scale Breadcrumbs */}
         <div className={styles.breadcrumbBar}>
           <span className={styles.bcItem} onClick={() => handleScaleSwitch('national')}>
-            Bharat (India)
+            All India
           </span>
           <span className={styles.bcSep}>/</span>
           <span
@@ -106,11 +109,11 @@ export default function GISMap({
             className={`${styles.bcItem} ${scaleLevel === 'cadastral' ? styles.bcActive : ''}`}
             onClick={() => handleScaleSwitch('cadastral')}
           >
-            {selectedDistrict.name} Corridor ({selectedPlot ? `Khasra ${selectedPlot.khasraNo}` : 'Survey Grid'})
+            {selectedDistrict.name} ({selectedPlot ? `Plot ${selectedPlot.khasraNo}` : 'Survey Plots'})
           </span>
 
           <div className={styles.scaleRatio}>
-            Scale: {scaleLevel === 'national' ? '1 : 5,000,000' : scaleLevel === 'district' ? '1 : 250,000' : '1 : 2,500'}
+            Zoom Level: {scaleLevel === 'national' ? 'Country Overview' : scaleLevel === 'district' ? 'District Level' : 'Individual Plot Level'}
           </div>
         </div>
       </div>
@@ -124,7 +127,7 @@ export default function GISMap({
               checked={activeLayers.heatmap}
               onChange={() => toggleLayer('heatmap')}
             />
-            <span>Risk Heatmap</span>
+            <span>Delay Risk Colors</span>
           </label>
           <label className={styles.layerCheck}>
             <input
@@ -132,7 +135,7 @@ export default function GISMap({
               checked={activeLayers.corridors}
               onChange={() => toggleLayer('corridors')}
             />
-            <span>Infrastructure Corridors</span>
+            <span>Highway & Rail Corridors</span>
           </label>
           <label className={styles.layerCheck}>
             <input
@@ -140,7 +143,7 @@ export default function GISMap({
               checked={activeLayers.labels}
               onChange={() => toggleLayer('labels')}
             />
-            <span>Labels & Numbers</span>
+            <span>Names & Numbers</span>
           </label>
           <label className={styles.layerCheck}>
             <input
@@ -158,7 +161,7 @@ export default function GISMap({
           </svg>
           <input
             type="text"
-            placeholder={scaleLevel === 'national' ? 'Search state (e.g. MP, Maharashtra)...' : scaleLevel === 'district' ? 'Search district corridor (e.g. Bhopal, Indore)...' : 'Search Khasra / Survey No...'}
+            placeholder={scaleLevel === 'national' ? 'Search state (e.g. MP, Maharashtra)...' : scaleLevel === 'district' ? 'Search district (e.g. Bhopal, Indore)...' : 'Search Khasra / Plot number...'}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className={styles.searchInput}
@@ -173,19 +176,15 @@ export default function GISMap({
           <div className={styles.viewport}>
             <svg viewBox="0 0 100 100" className={styles.svg}>
               <defs>
-                <radialGradient id="highRiskGlow" cx="50%" cy="50%" r="50%">
-                  <stop offset="0%" stopColor="#ef4444" stopOpacity="0.4" />
-                  <stop offset="100%" stopColor="#ef4444" stopOpacity="0" />
-                </radialGradient>
                 <pattern id="gridPattern" width="10" height="10" patternUnits="userSpaceOnUse">
                   <path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.04)" strokeWidth="0.3" />
                 </pattern>
               </defs>
 
-              {/* Grid Background */}
+              {/* Background Grid */}
               <rect width="100" height="100" fill="url(#gridPattern)" />
 
-              {/* India National Boundary Outline Base */}
+              {/* India National Outline */}
               <path
                 d="M 32,5 C 38,4 44,8 48,14 C 52,18 64,18 70,22 C 76,26 84,26 90,30 C 94,33 96,40 92,44 C 84,46 80,42 75,44 C 74,48 76,54 75,60 C 72,66 68,70 60,74 C 55,80 50,88 44,97 C 40,94 36,86 35,76 C 30,68 22,60 16,52 C 14,46 18,40 22,38 C 24,32 26,26 28,18 Z"
                 fill="#0b1324"
@@ -193,10 +192,9 @@ export default function GISMap({
                 strokeWidth="1.2"
               />
 
-              {/* Major National Highway / Freight Corridors (PM Gati Shakti / NHAI Alignment) */}
+              {/* Major National Highway & Freight Corridors */}
               {activeLayers.corridors && (
                 <g className={styles.corridorsLayer}>
-                  {/* Golden Quadrilateral East-West / North-South Links */}
                   <path d="M 36,20 L 48,52 L 44,90" stroke="#0284c7" strokeWidth="0.8" strokeDasharray="1.5,1" opacity="0.6" />
                   <path d="M 22,48 L 48,52 L 74,44" stroke="#0284c7" strokeWidth="0.8" strokeDasharray="1.5,1" opacity="0.6" />
                   <path d="M 38,66 L 48,52 L 52,34" stroke="#0284c7" strokeWidth="0.8" strokeDasharray="1.5,1" opacity="0.6" />
@@ -239,7 +237,7 @@ export default function GISMap({
                         strokeWidth="0.5"
                       />
 
-                      {/* State Name & Risk Score Label */}
+                      {/* State Name & Risk Label */}
                       {activeLayers.labels && (
                         <text
                           x={state.centerCoords[0]}
@@ -257,21 +255,21 @@ export default function GISMap({
                   );
                 })}
 
-              {/* Hover Tooltip in SVG */}
+              {/* Clean Human-Friendly Hover Tooltip */}
               {hoveredItem && (
                 <g className={styles.svgTooltip} transform={`translate(${Math.min(hoveredItem.centerCoords[0] + 3, 62)}, ${Math.max(hoveredItem.centerCoords[1] - 12, 8)})`}>
-                  <rect width="34" height="20" rx="2" fill="#0f172a" stroke="#38bdf8" strokeWidth="0.6" opacity="0.95" />
+                  <rect width="36" height="20" rx="2" fill="#0f172a" stroke="#38bdf8" strokeWidth="0.6" opacity="0.95" />
                   <text x="3" y="4.5" fontSize="2.8" fill="#ffffff" fontWeight="700">
                     {hoveredItem.name}
                   </text>
                   <text x="3" y="8.5" fontSize="2.2" fill={riskColors[hoveredItem.riskLevel]} fontWeight="600">
-                    Risk: {hoveredItem.riskScore}% · {hoveredItem.delayedProjects} Projects Delayed
+                    Delay Risk: {hoveredItem.riskScore}% ({hoveredItem.delayedProjects} Projects at Risk)
                   </text>
                   <text x="3" y="12.5" fontSize="2.0" fill="#94a3b8">
-                    Capital At Risk: ₹{hoveredItem.capitalAtRiskCr} Cr
+                    Estimated Budget at Stake: ₹{hoveredItem.capitalAtRiskCr} Cr
                   </text>
                   <text x="3" y="16.5" fontSize="1.8" fill="#38bdf8">
-                    Click to drill down into districts →
+                    Click to view districts & projects →
                   </text>
                 </g>
               )}
@@ -280,36 +278,36 @@ export default function GISMap({
             {/* National Summary Overlay */}
             <div className={styles.nationalSummaryCard}>
               <div className={styles.summaryTitle}>
-                <span>Pan-India Land Acquisition Risk Telemetry</span>
-                <span className={styles.liveIndicator}>Live Sync: PM Gati Shakti</span>
+                <span>National Land Acquisition Overview</span>
+                <span className={styles.liveIndicator}>Across All States</span>
               </div>
               <div className={styles.summaryMetrics}>
                 <div className={styles.smItem}>
                   <span className={styles.smNum}>512</span>
-                  <span className={styles.smLabel}>Total Projects Monitored</span>
+                  <span className={styles.smLabel}>Total Projects</span>
                 </div>
                 <div className={styles.smItem}>
                   <span className={styles.smNum} style={{ color: '#ef4444' }}>186</span>
-                  <span className={styles.smLabel}>High-Delay Risk</span>
+                  <span className={styles.smLabel}>High Delay Risk</span>
                 </div>
                 <div className={styles.smItem}>
                   <span className={styles.smNum} style={{ color: '#f59e0b' }}>₹52,480 Cr</span>
-                  <span className={styles.smLabel}>Capital At Risk</span>
+                  <span className={styles.smLabel}>Budget at Risk</span>
                 </div>
                 <div className={styles.smItem}>
                   <span className={styles.smNum} style={{ color: '#10b981' }}>87.3%</span>
-                  <span className={styles.smLabel}>AI Delay Accuracy</span>
+                  <span className={styles.smLabel}>Prediction Accuracy</span>
                 </div>
               </div>
             </div>
           </div>
         )}
 
-        {/* LEVEL 2: MEDIUM SCALE (STATE & DISTRICT CORRIDORS VIEW) */}
+        {/* LEVEL 2: MEDIUM SCALE (STATE & DISTRICTS VIEW) */}
         {scaleLevel === 'district' && (
           <div className={styles.viewport}>
             <svg viewBox="0 0 100 100" className={styles.svg}>
-              {/* Madhya Pradesh State Regional Shape */}
+              {/* State Boundary */}
               <path
                 d="M 12,32 Q 8,20 22,14 Q 38,6 55,10 Q 72,6 84,18 Q 94,28 88,44 Q 92,60 80,68 Q 70,80 54,82 Q 44,88 34,82 Q 20,84 14,70 Q 6,58 10,44 Z"
                 fill="#09101d"
@@ -318,15 +316,13 @@ export default function GISMap({
                 strokeOpacity="0.8"
               />
 
-              {/* Major Highway Corridors */}
+              {/* Major Corridors */}
               {activeLayers.corridors && (
                 <g>
-                  {/* NH-46 North-South Freight Corridor */}
                   <path d="M 50,15 L 50,45 L 52,72 L 52,85" stroke="#38bdf8" strokeWidth="1.4" strokeDasharray="3,2" />
-                  {/* Indore - Bhopal Industrial Expressway */}
                   <path d="M 25,48 L 38,35 L 50,45 L 72,48" stroke="#38bdf8" strokeWidth="1.4" strokeDasharray="3,2" />
-                  <text x="32" y="30" fontSize="2.2" fill="#38bdf8" fontWeight="600">NH-46 Corridor</text>
-                  <text x="56" y="42" fontSize="2.2" fill="#38bdf8" fontWeight="600">Bhopal Outer Ring</text>
+                  <text x="32" y="30" fontSize="2.2" fill="#38bdf8" fontWeight="600">NH-46 Highway</text>
+                  <text x="56" y="42" fontSize="2.2" fill="#38bdf8" fontWeight="600">Bhopal Ring Road</text>
                 </g>
               )}
 
@@ -355,7 +351,6 @@ export default function GISMap({
                         className={styles.districtPath}
                       />
 
-                      {/* District Node */}
                       <circle
                         cx={dist.center.x}
                         cy={dist.center.y}
@@ -365,7 +360,6 @@ export default function GISMap({
                         strokeWidth="0.8"
                       />
 
-                      {/* Pulsing ring for high risk */}
                       {dist.riskScore >= 70 && (
                         <circle
                           cx={dist.center.x}
@@ -379,7 +373,6 @@ export default function GISMap({
                         />
                       )}
 
-                      {/* District Name Label */}
                       {activeLayers.labels && (
                         <text
                           x={dist.center.x}
@@ -405,16 +398,16 @@ export default function GISMap({
                     {hoveredItem.name} District
                   </text>
                   <text x="3" y="8.5" fontSize="2.2" fill={riskColors[hoveredItem.riskLevel]} fontWeight="600">
-                    Risk Score: {hoveredItem.riskScore}% · {hoveredItem.projectCount} Projects
+                    Delay Risk: {hoveredItem.riskScore}% · {hoveredItem.projectCount} Projects
                   </text>
                   <text x="3" y="12.5" fontSize="1.9" fill="#cbd5e1">
-                    Corridor: {hoveredItem.corridor}
+                    Project Corridor: {hoveredItem.corridor}
                   </text>
                   <text x="3" y="16.5" fontSize="1.9" fill="#f59e0b">
-                    Bottleneck: {hoveredItem.leadBottleneck}
+                    Main Reason: {hoveredItem.leadBottleneck}
                   </text>
                   <text x="3" y="20.0" fontSize="1.8" fill="#38bdf8">
-                    Click to inspect Cadastral Survey Plots →
+                    Click to inspect Village Land Plots (Khasra) →
                   </text>
                 </g>
               )}
@@ -425,30 +418,28 @@ export default function GISMap({
               <div className={styles.dbInfo}>
                 <span className={styles.dbTag}>SELECTED STATE</span>
                 <span className={styles.dbTitle}>{selectedState.name} ({selectedState.activeProjects} Active Projects)</span>
-                <span className={styles.dbSub}>Primary Challenge: {selectedState.primaryBottleneck}</span>
+                <span className={styles.dbSub}>Main Challenge: {selectedState.primaryBottleneck}</span>
               </div>
               <button className={styles.dbActionBtn} onClick={() => handleScaleSwitch('cadastral')}>
-                Open Cadastral Survey Layer →
+                Open Land Plots (Khasra) View →
               </button>
             </div>
           </div>
         )}
 
-        {/* LEVEL 3: MICRO SCALE (CADASTRAL SURVEY / KHASRA PARCEL POLYGONS) */}
+        {/* LEVEL 3: MICRO SCALE (VILLAGE LAND PLOTS / KHASRA PARCELS) */}
         {scaleLevel === 'cadastral' && (
           <div className={styles.viewport}>
             <svg viewBox="0 0 100 100" className={styles.svg}>
-              {/* Cadastral Village Map Grid Lines */}
               <defs>
                 <pattern id="surveyHatch" width="4" height="4" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
                   <line x1="0" y1="0" x2="0" y2="4" stroke="rgba(220, 38, 38, 0.25)" strokeWidth="0.8" />
                 </pattern>
               </defs>
 
-              {/* Highway / Project Right of Way (ROW) Centerline */}
+              {/* Road / Alignment Centerline */}
               {activeLayers.corridors && (
                 <g>
-                  {/* Proposed 60m ROW Road Corridor Band */}
                   <polygon
                     points="0,28 100,24 100,42 0,46"
                     fill="rgba(56, 189, 248, 0.08)"
@@ -458,7 +449,7 @@ export default function GISMap({
                   />
                   <line x1="0" y1="37" x2="100" y2="33" stroke="#38bdf8" strokeWidth="0.8" strokeDasharray="3,1.5" />
                   <text x="5" y="34" fontSize="2.2" fill="#38bdf8" fontWeight="600">
-                    Proposed NH-46 60m Right-of-Way (Alignment Corridor)
+                    Proposed Highway 60-meter Acquisition Corridor (Right of Way)
                   </text>
                 </g>
               )}
@@ -478,7 +469,6 @@ export default function GISMap({
                       onMouseLeave={() => setHoveredItem(null)}
                       onClick={() => handlePlotClick(plot)}
                     >
-                      {/* Parcel Polygon */}
                       <polygon
                         points={plot.polygonPoints}
                         fill={plot.riskScore > 75 ? (isSelected ? 'url(#surveyHatch)' : plot.color) : plot.color}
@@ -488,7 +478,6 @@ export default function GISMap({
                         className={styles.plotPolygon}
                       />
 
-                      {/* Parcel Label: Khasra Number & Area */}
                       {activeLayers.labels && (
                         <g>
                           <text
@@ -501,7 +490,7 @@ export default function GISMap({
                             fontWeight="700"
                             className={styles.mapLabel}
                           >
-                            Khasra {plot.khasraNo}
+                            Plot {plot.khasraNo}
                           </text>
                           <text
                             x={plot.polygonPoints.split(' ')[0].split(',')[0]}
@@ -512,12 +501,12 @@ export default function GISMap({
                             fill="#cbd5e1"
                             className={styles.mapLabel}
                           >
-                            {plot.area.split(' ')[0]} ha · {plot.riskScore}% Risk
+                            {plot.area.split(' ')[0]} ha · {plot.riskScore}% Delay Risk
                           </text>
                         </g>
                       )}
 
-                      {/* Disputed marker tag */}
+                      {/* Disputed marker */}
                       {plot.courtStay !== 'None' && (
                         <circle
                           cx={parseFloat(plot.polygonPoints.split(' ')[1].split(',')[0]) - 4}
@@ -537,16 +526,16 @@ export default function GISMap({
                 <g className={styles.svgTooltip} transform="translate(10, 5)">
                   <rect width="80" height="18" rx="2" fill="#0f172a" stroke="#38bdf8" strokeWidth="0.6" opacity="0.95" />
                   <text x="3" y="4.5" fontSize="2.8" fill="#ffffff" fontWeight="700">
-                    Khasra No. {hoveredItem.khasraNo} · {hoveredItem.village}, {hoveredItem.district}
+                    Plot (Khasra) No. {hoveredItem.khasraNo} · {hoveredItem.village}, {hoveredItem.district}
                   </text>
                   <text x="3" y="8.5" fontSize="2.2" fill={riskColors[hoveredItem.riskLevel]} fontWeight="600">
-                    Risk Score: {hoveredItem.riskScore}% · Est. Delay: {hoveredItem.estimatedDelay}
+                    Delay Risk: {hoveredItem.riskScore}% · Est. Delay: {hoveredItem.estimatedDelay}
                   </text>
                   <text x="3" y="12.2" fontSize="2.0" fill="#cbd5e1">
-                    Title Holder: {hoveredItem.owner} · Circle Rate: {hoveredItem.circleRate}
+                    Land Owner: {hoveredItem.owner} · Circle Rate: {hoveredItem.circleRate}
                   </text>
                   <text x="3" y="15.8" fontSize="1.9" fill="#f59e0b">
-                    Status: {hoveredItem.mutationStatus} · {hoveredItem.courtStay}
+                    Status: {hoveredItem.mutationStatus} · Court Cases: {hoveredItem.courtStay}
                   </text>
                 </g>
               )}
@@ -555,23 +544,23 @@ export default function GISMap({
             {/* Cadastral Bottom Ribbon */}
             <div className={styles.cadastralRibbon}>
               <div className={styles.crItem}>
-                <span className={styles.crLabel}>Selected Survey Plot</span>
-                <span className={styles.crValue}>Khasra {selectedPlot.khasraNo} ({selectedPlot.village})</span>
+                <span className={styles.crLabel}>Selected Land Plot</span>
+                <span className={styles.crValue}>Plot {selectedPlot.khasraNo} ({selectedPlot.village})</span>
               </div>
               <div className={styles.crItem}>
-                <span className={styles.crLabel}>Title Status</span>
+                <span className={styles.crLabel}>Land Register Status</span>
                 <span className={styles.crValue} style={{ color: selectedPlot.riskScore > 70 ? '#ef4444' : '#10b981' }}>
                   {selectedPlot.mutationStatus}
                 </span>
               </div>
               <div className={styles.crItem}>
-                <span className={styles.crLabel}>Court Stay Status</span>
+                <span className={styles.crLabel}>Court Stay / Dispute</span>
                 <span className={styles.crValue} style={{ color: selectedPlot.courtStay !== 'None' ? '#ef4444' : '#10b981' }}>
                   {selectedPlot.courtStay}
                 </span>
               </div>
               <div className={styles.crItem}>
-                <span className={styles.crLabel}>RFCTLARR Solatium</span>
+                <span className={styles.crLabel}>Compensation Status</span>
                 <span className={styles.crValue}>{selectedPlot.rfctlarrStatus}</span>
               </div>
             </div>
